@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #7C0A02;
+  --background: #202124;
+}
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('/assets/fonts/DancingScript-VariableFont_wght.ttf') format("truetype-variations");
+  font-weight: 1 999;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Dancing Script, "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+}
+body, app-root{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  // align-items: center;
+  font-size: 24px;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85vw;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  color: #fff;
+  margin: 25px auto;
+}
+button, a{
+  display: flex;
+  text-decoration: none;
+}
+.--primary{
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--primary);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary) 100%);
+  border-radius: 6px;
+  border: none;
+  transition: all .3s;
+  &:focus, &:hover {
+    scale: 1.1;
+  }
+}
+
+
+
+.go_back{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 24px;
+}

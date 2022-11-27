@@ -1,0 +1,40 @@
+body{
+  --background_image: url('/assets/images/o623931.jpg');
+  background-image: var(--background_image);
+  background-size: contain;
+  background-position: center;
+}
+.letters, .presents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 25%;
+  background: transparent !important;
+  max-width: 150px;
+  max-height: 150px;
+
+  span{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+  img{
+    max-width: 150px;
+  }
+}
+.letters{
+  left: 25%;
+  // background: url('/assets/images/gift.png');
+}
+.presents{
+  right: 25%;
+  opacity: .3;
+  // background: url('/assets/images/gift.png');
+}
