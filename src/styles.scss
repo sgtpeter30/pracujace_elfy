@@ -52,7 +52,7 @@ button, a{
   border-radius: 6px;
   border: none;
   transition: all .3s;
-  &:focus, &:hover {
+  &:hover {
     scale: 1.1;
   }
 }

@@ -1,10 +1,6 @@
 {
   "list": [
-    {
-      "Submission Date": "Nov 21, 2022",
-      "Nazywam się:": "Brygida Błaszczyk",
-      "Lista": "Nazwa prezentu: nożyce do drobiu, Link: https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE, Dodatkowe informacje: do wyboru kilka opcji\nNazwa prezentu: nożyce do drobiu, Link:  https://sklep.technica.pl/nozyce-do-drobiu/nozyce-do-drobiu-ze-stali-nierdzewnej-z-wewnetrzna-sprezyna-o-dlugosci-240-mm-contacto-14-240, Dodatkowe informacje: \nNazwa prezentu: bluza, Link: https://mabaje.pl/pl/p/Bluza-mis-melange-/3310, Dodatkowe informacje: M lub L\nNazwa prezentu: szampon p/w wypadaniu włosów, Link: https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB, Dodatkowe informacje:"
-    }
+
   ],
   "secondList": [
     {
@@ -30,108 +26,108 @@
   ],
   "sortedList": [
     {
+      "name": "Agatka",
+      "list": [
+        {
+          "name": "Ręcznik, mogą być nawet dwa,",
+          "link": "https://www.action.com/pl-pl/p/rcznik-hotel-royal/",
+          "additionalInfo": ""
+        },
+        {
+          "name": "Prześcieradło 120x200,",
+          "link": "https://allegro.pl/oferta/przescieradlo-jersey-z-gumka-120x200-bawelna-100-10722168313?bi_s=ads&bi_m=listing:mobile:query&bi_c=YjgxNmQ4Y2YtZDM1NS00ZjNmLTlkZjktOTJiZWQ4OTYwYzZmAA&bi_t=ape&referrer=proxy&emission_unit_id=255c7020-eb52-4488-96f5-2c0b00862b57",
+          "additionalInfo": "Bardzo proszę o kolor biały - trzeba wpisać w \"ważne informacje dla sprzedającego\""
+        },
+        {
+          "name": "Słuchawki do PS4 ,",
+          "link": "https://www.euro.com.pl/sluchawki-dla-graczy-pc/natec-genesis-h59.bhtml#afterSearch-s%C5%82uchawki%20genesis%20argon%20400||||product",
+          "additionalInfo": "Prezent do złożenia się z kimś jeśli jest taka potrzeba :)"
+        },
+        {
+          "name": "Końcówka do szczoteczki Oral-B iO,",
+          "link": "https://allegro.pl/oferta/4-x-oryginalne-koncowki-oral-b-precision-clean-8918159259?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_zdrowie_hb_health_pla_pmax&ev_campaign_id=17997543997&gclid=CjwKCAiAyfybBhBKEiwAgtB7fvYBUYYn0biJuXb9Axe4_1wCWceQyQZ4UL7r6I2oXE4TJtHzEjZ6nBoCWgcQAvD_BwE",
+          "additionalInfo": ""
+        },
+        {
+          "name": "Sweter,",
+          "link": "https://www.sinsay.com/pl/pl/sweter-z-ozdobnym-splotem-5159o-69x",
+          "additionalInfo": "Kolor turkusowy, rozmiar XXS"
+        },
+        {
+          "name": "Szczotka do włosów,",
+          "link": "https://www.douglas.pl/pl/p/5010552217?variant=1017213",
+          "additionalInfo": "Rozmiar Medium"
+        },
+        {
+          "name": "W razie czego będę zawsze zadowolona z bonu do kaskady :),",
+          "link": "",
+          "additionalInfo": ""
+        }
+      ],
+      "id": 1
+    },
+    {
       "name": "Brygida Błaszczyk",
       "list": [
         {
-          "name": " nożyce do drobiu,",
-          "link": " https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE, ",
-          "additionalInfo": " do wyboru kilka opcji\n"
+          "name": "nożyce do drobiu,",
+          "link": "https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE",
+          "additionalInfo": "do wyboru kilka opcji"
         },
         {
-          "name": " nożyce do drobiu,",
-          "link": "  https://sklep.technica.pl/nozyce-do-drobiu/nozyce-do-drobiu-ze-stali-nierdzewnej-z-wewnetrzna-sprezyna-o-dlugosci-240-mm-contacto-14-240, ",
-          "additionalInfo": " \n"
+          "name": "nożyce do drobiu,",
+          "link": "https://sklep.technica.pl/nozyce-do-drobiu/nozyce-do-drobiu-ze-stali-nierdzewnej-z-wewnetrzna-sprezyna-o-dlugosci-240-mm-contacto-14-240",
+          "additionalInfo": ""
         },
         {
-          "name": " bluza,",
-          "link": " https://mabaje.pl/pl/p/Bluza-mis-melange-/3310, ",
-          "additionalInfo": " M lub L\n"
+          "name": "bluza,",
+          "link": "https://mabaje.pl/pl/p/Bluza-mis-melange-/3310",
+          "additionalInfo": "M lub L"
         },
         {
-          "name": " szampon p/w wypadaniu włosów,",
-          "link": " https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB, ",
+          "name": "szampon p/w wypadaniu włosów,",
+          "link": "https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB",
           "additionalInfo": ""
         }
       ],
       "id": 2
     },
     {
-      "name": "Brygida Błaszczyk",
+      "name": "Teresa Rosłonkiewicz",
       "list": [
         {
-          "name": " nożyce do drobiu,",
-          "link": " https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE, ",
-          "additionalInfo": " do wyboru kilka opcji\n"
-        },
-        {
-          "name": " nożyce do drobiu,",
-          "link": "  https://sklep.technica.pl/nozyce-do-drobiu/nozyce-do-drobiu-ze-stali-nierdzewnej-z-wewnetrzna-sprezyna-o-dlugosci-240-mm-contacto-14-240, ",
-          "additionalInfo": " \n"
-        },
-        {
-          "name": " bluza,",
-          "link": " https://mabaje.pl/pl/p/Bluza-mis-melange-/3310, ",
-          "additionalInfo": " M lub L\n"
-        },
-        {
-          "name": " szampon p/w wypadaniu włosów,",
-          "link": " https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB, ",
+          "name": "szampon do włosów,",
+          "link": "https://www.hairstore.pl/macadamia-professional-vege-szampon-do-wlosow-cienkich-1000ml-p26541.html",
           "additionalInfo": ""
         }
       ],
       "id": 3
     },
     {
-      "name": "Brygida Błaszczyk",
+      "name": "Kaja",
       "list": [
         {
-          "name": " nożyce do drobiu,",
-          "link": " https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE, ",
-          "additionalInfo": " do wyboru kilka opcji\n"
-        },
-        {
-          "name": " nożyce do drobiu,",
-          "link": "  https://sklep.technica.pl/nozyce-do-drobiu/nozyce-do-drobiu-ze-stali-nierdzewnej-z-wewnetrzna-sprezyna-o-dlugosci-240-mm-contacto-14-240, ",
-          "additionalInfo": " \n"
-        },
-        {
-          "name": " bluza,",
-          "link": " https://mabaje.pl/pl/p/Bluza-mis-melange-/3310, ",
-          "additionalInfo": " M lub L\n"
-        },
-        {
-          "name": " szampon p/w wypadaniu włosów,",
-          "link": " https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB, ",
+          "name": "Karta do decathlona,",
+          "link": "",
           "additionalInfo": ""
+        },
+        {
+          "name": "Bon do baltica spa lub masaż twarzy,",
+          "link": "",
+          "additionalInfo": ""
+        },
+        {
+          "name": "Ampułki do włosów vichy aminexil,",
+          "link": "http://ceneo.pl/47636203?se=zEJYJokPW5GRoW-rqr63vMsuYNmaiX-8&gclid=EAIaIQobChMItOj7keS5-wIVjtwYCh3HQAtCEAAYASAAEgJIXfD_BwE",
+          "additionalInfo": ""
+        },
+        {
+          "name": "Subskrypcja ps plus na 3 m-ce lub 6 m-cy,",
+          "link": "",
+          "additionalInfo": "Dłuższej na razie nie potrzebuję bo będzie hogwarts legacy:D"
         }
       ],
       "id": 4
-    },
-    {
-      "name": "Brygida Błaszczyk",
-      "list": [
-        {
-          "name": " nożyce do drobiu,",
-          "link": " https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE, ",
-          "additionalInfo": " do wyboru kilka opcji\n"
-        },
-        {
-          "name": " nożyce do drobiu,",
-          "link": "  https://sklep.technica.pl/nozyce-do-drobiu/nozyce-do-drobiu-ze-stali-nierdzewnej-z-wewnetrzna-sprezyna-o-dlugosci-240-mm-contacto-14-240, ",
-          "additionalInfo": " \n"
-        },
-        {
-          "name": " bluza,",
-          "link": " https://mabaje.pl/pl/p/Bluza-mis-melange-/3310, ",
-          "additionalInfo": " M lub L\n"
-        },
-        {
-          "name": " szampon p/w wypadaniu włosów,",
-          "link": " https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB, ",
-          "additionalInfo": ""
-        }
-      ],
-      "id": 5
     }
   ]
 }

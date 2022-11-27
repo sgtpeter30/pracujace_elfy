@@ -33,6 +33,7 @@ import { LetterComponent } from './tree/letters/letter/letter.component';
       { path: 'tree/letters', component: LettersComponent},
       { path: 'tree/letters/letter/:id', component: LetterComponent},
       { path: 'tree/presents', component: PresentsComponent},
+      { path: 'tree/presents/present/:id', component: PresentComponent},
       { path: 'admin', component: HomeComponent},
     ]),
     BrowserAnimationsModule,

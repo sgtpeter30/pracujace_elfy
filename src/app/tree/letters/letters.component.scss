@@ -35,6 +35,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
   width: calc(25% - 50px);
   height: 300px;
   margin: 25px;
@@ -43,9 +45,6 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   transition: all .3s;
-  &:hover{
-    scale: 1.1;
-  }
   span{
     display: flex;
     justify-content: center;
@@ -53,6 +52,6 @@ body{
     text-align: center;
     color: #333;
     font-size: 24px;
-    max-width: 30px;
+    width: 100%;
   }
 }

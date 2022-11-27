@@ -1,1 +1,39 @@
-<p>present works!</p>
+<h1>{{letter!.name}}</h1>
+<a class="--primary go_back"  href="./tree/presents" title="Wróć">
+  <span>Wróć</span>
+</a>
+<main>
+  <ng-container *ngFor="let item of letter.list">
+    <div class="gift_wrapper">
+      <div class="{{giftClass}}" [ngClass]="{picked: item.timesPicked}">
+
+        <div *ngIf="item.link">
+          <a [href]="sanitizer.bypassSecurityTrustUrl(item.link)" target="_blank" rel="noopener">
+            <span class="title">Nazwa prezentu: </span>
+            <span class="value">
+              {{item.name}}
+            </span>
+          </a>
+        </div>
+        <div *ngIf="!item.link">
+          <span class="title">Nazwa prezentu: </span>
+          <span class="value">
+            {{item.name}}
+          </span>
+        </div>
+        <div *ngIf="item.additionalInfo">
+          <span class="title">Dodatkowe informacje: </span>
+          <span class="value">
+            {{item.additionalInfo}}
+          </span>
+        </div>
+      </div>
+      <div class="times_picked" *ngIf="item.timesPicked">
+        Ilośc elfów pomagających przy tym prezencie: {{item.timesPicked}}
+      </div>
+      <button class="--primary" (click)="addPresent(item)">Zapakuj ten prezent</button>
+      <button class="--primary" *ngIf="item.timesPicked" (click)="removePresent(item)">Odpakuj ten prezent</button>
+    </div>
+
+  </ng-container>
+</main>

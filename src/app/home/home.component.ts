@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
           name: element["Nazywam się:"],
           list: list
         }
+
         this.http.post(this.postUrl, newElement).subscribe()
       });
     })
@@ -43,11 +44,11 @@ export class HomeComponent implements OnInit {
     // tempList.splice(tempList.indexOf(''), 1)
 
     tempList.forEach(el =>{
-      let tempObj = el.split(/(?: Link:|Dodatkowe informacje:)/)
+      let tempObj = el.split(/(?: Link:|, Dodatkowe informacje:)/)
       listObj.push({
-        name: tempObj[0],
-        link: tempObj[1],
-        additionalInfo: tempObj[2],
+        name: tempObj[0].trim(),
+        link: tempObj[1].trim(),
+        additionalInfo: tempObj[2].trim(),
       })
     })
     return listObj;

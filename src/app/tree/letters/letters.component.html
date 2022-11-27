@@ -3,14 +3,21 @@
 <a class="--primary go_back"  href="" title="Wróć">
   <span>Wróć</span>
 </a>
-
 <main>
   <ng-container *ngFor="let item of list">
     <!-- <a class="child" href="./letter/{{item.id}}"> -->
-    <a class="child" routerLink="./letter/{{item.id}}">
-      <span>
+    <div class="child">
+      <span class="title">
         {{item.name}}
       </span>
-    </a>
+      <ng-container *ngFor="let present of item.list">
+        <span>{{present.name}}</span>
+      </ng-container>
+    </div>
   </ng-container>
+  <div class="child new_letter">
+    <a class="title" [href]="sanitizer.bypassSecurityTrustUrl('https://eu.jotform.com/form/223227488201048')" target="_blank" rel="noopener">
+      Dodaj nowy list
+    </a>
+  </div>
 </main>

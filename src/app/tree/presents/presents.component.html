@@ -1,1 +1,16 @@
-<p>presents works!</p>
+<h1>Lista grzecznych dzieci</h1>
+
+<a class="--primary go_back"  href="" title="Wróć">
+  <span>Wróć</span>
+</a>
+
+<main>
+  <ng-container *ngFor="let item of list">
+    <!-- <a class="child" href="./letter/{{item.id}}"> -->
+    <a class="child" routerLink="./present/{{item.id}}">
+      <span>
+        {{item.name}}
+      </span>
+    </a>
+  </ng-container>
+</main>
