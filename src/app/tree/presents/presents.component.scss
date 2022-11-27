@@ -2,7 +2,8 @@ body{
   --background_image: url('/assets/images/o2807066.jpg');
   --background_image: url('/assets/images/o2132261.jpg');
   // --background_image: url('/assets/images/bg_3.jpg');
-  background-image: var(--background_image);
+  background-image: url('/assets/images/o2132261.jpg');
+  background-size: cover;
 }
 h1{
   position: relative;

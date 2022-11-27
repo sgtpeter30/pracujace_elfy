@@ -1,7 +1,5 @@
 {
-  "list": [
-
-  ],
+  "list": [],
   "secondList": [
     {
       "Submission Date": "Nov 23, 2022",
@@ -82,7 +80,8 @@
         {
           "name": "bluza,",
           "link": "https://mabaje.pl/pl/p/Bluza-mis-melange-/3310",
-          "additionalInfo": "M lub L"
+          "additionalInfo": "M lub L",
+          "timesPicked": 1
         },
         {
           "name": "szampon p/w wypadaniu włosów,",
@@ -109,7 +108,8 @@
         {
           "name": "Karta do decathlona,",
           "link": "",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 0
         },
         {
           "name": "Bon do baltica spa lub masaż twarzy,",

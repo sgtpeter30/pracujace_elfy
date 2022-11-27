@@ -1,10 +1,14 @@
 <h1>Witajcie drogie elfy</h1>
-<a class="--primary letters"  href="/tree/letters" title="Listy do Mikołaja">
+<a class="--primary letters"
+[routerLink]="['/tree/letters']"
+
+ title="Listy do Mikołaja">
   <span>Listy do Mikołaja</span>
   <img src="/assets/images/scroll.png" alt="Listy do Mikołaja">
 </a>
 <a class="--primary presents"
-  href="/tree/presents" title="Prezenty" disabled="true">
+[routerLink]="['/tree/presents']"
+title="Prezenty" disabled="true">
   <span>Prezenty</span>
   <img src="/assets/images/gift.png" alt="Prezenty">
 </a>

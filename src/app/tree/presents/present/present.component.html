@@ -1,10 +1,10 @@
-<h1>{{letter!.name}}</h1>
-<a class="--primary go_back"  href="./tree/presents" title="Wróć">
+<h1 *ngIf="letter">{{letter!.name}}</h1>
+<a class="--primary go_back"  routerLink="../.." title="Wróć">
   <span>Wróć</span>
 </a>
-<main>
+<main *ngIf="letter">
   <ng-container *ngFor="let item of letter.list">
-    <div class="gift_wrapper">
+    <div class="gift_wrapper" *ngIf="item.name">
       <div class="{{giftClass}}" [ngClass]="{picked: item.timesPicked}">
 
         <div *ngIf="item.link">
