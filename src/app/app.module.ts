@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -12,6 +12,13 @@ import { LettersComponent } from './tree/letters/letters.component';
 import { PresentsComponent } from './tree/presents/presents.component';
 import { PresentComponent } from './tree/presents/present/present.component';
 import { LetterComponent } from './tree/letters/letter/letter.component';
+import { BaseUrlInterceptor } from './http-interceptor';
+
+export const environment = {
+  production: true,
+  apiUrl: "https://straszna-fabryka-swietego-mikolaja.loca.lt"
+  // apiUrl: "http://localhost:3000"
+};
 
 @NgModule({
   declarations: [
@@ -38,7 +45,10 @@ import { LetterComponent } from './tree/letters/letter/letter.component';
     ]),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: "BASE_API_URL", useValue: environment.apiUrl },
+    { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

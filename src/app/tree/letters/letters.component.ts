@@ -1,6 +1,7 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from 'src/app/app.module';
 
 @Component({
   selector: 'app-letters',
@@ -10,13 +11,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class LettersComponent {
   list: any;
-  listUrl = 'http://localhost:3000/sortedList'
-
   constructor(
     private http: HttpClient,
     public sanitizer: DomSanitizer
   ){
-    this.http.get(this.listUrl).subscribe(data => {
+    this.http.get('sortedList').subscribe(data => {
       this.list = data
     })
   }

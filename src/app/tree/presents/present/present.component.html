@@ -31,8 +31,10 @@
       <div class="times_picked" *ngIf="item.timesPicked">
         Ilośc elfów pomagających przy tym prezencie: {{item.timesPicked}}
       </div>
-      <button class="--primary" (click)="addPresent(item)">Zapakuj ten prezent</button>
-      <button class="--primary" *ngIf="item.timesPicked" (click)="removePresent(item)">Odpakuj ten prezent</button>
+      <div class="button_wrapper">
+        <button class="--primary" (click)="addPresent(item)">Zapakuj ten prezent</button>
+        <button class="--primary" *ngIf="item.timesPicked" (click)="removePresent(item)">Odpakuj ten prezent</button>
+      </div>
     </div>
 
   </ng-container>

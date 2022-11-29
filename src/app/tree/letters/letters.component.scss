@@ -1,50 +1,81 @@
-body{
-  --background_image: url('/assets/images/o2807066.jpg');
-  --background_image: url('/assets/images/o2132261.jpg');
-  // --background_image: url('/assets/images/bg_3.jpg');
-  background-image: var(--background_image);
-}
 h1{
   position: relative;
   width: min-content;
   white-space: nowrap;
-  &:before, &:after{
+  background-color: #243d20;
+  padding: 0 25px;
+  // &:before, &:after{
+  &:before{
     content: '';
-    width: 50px;
+    // width: 50px;
+    // width: 100%;
+    width: calc(100vw - 100px);
+    // width: 100vw;
     height: 50px;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translate(-50%);
     z-index: -1;
     background-image: url('/assets/images/scroll.png');
+    background-image: url('/assets/images/pattern_darker.svg');
+    background-image: url('/assets/images/pattern_light.svg');
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
-  }
-  &:before{
-    left: -80px;
-  }
-  &:after{
-    right: -80px;
+    // background-color: #477640;
+    // background-repeat: no-repeat;
   }
 }
 body{
   align-items: stretch;
+  background-image: none;
 }
 
 .child{
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: flex-start;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: calc(25% - 50px);
-  height: 300px;
-  margin: 25px;
-  background-image: url('/assets/images/scroll.png');
+  width: calc(25% - 60px);
+  min-height: 300px;
+  margin: 80px 30px;
+  padding: 30px 20px;
+  background-color: antiquewhite;
   background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   transition: all .3s;
+  position: relative;
+  // box-shadow: inset 20px 20px 10px 20px rgba($color: #000000, $alpha: .4);
+  // box-shadow: 0 0 100px 100px rgba($color: #000000, $alpha: .4), inset 0 20px 40px rgba($color: #000000, $alpha: .4), inset 0px -10px 5px rgba($color: #000000, $alpha: .4);
+  // box-shadow: 0 -50px 50px red, 0 50px 50px blue, inset 0 20px 40px rgba($color: #000000, $alpha: .4), inset 0px -10px 5px rgba($color: #000000, $alpha: .4);
+  box-shadow: 0 -50px 50px rgba($color: #000000, $alpha: .4), 0 50px 50px rgba($color: #000000, $alpha: .4), inset 0 20px 40px rgba($color: #000000, $alpha: .4), inset 0px -10px 5px rgba($color: #000000, $alpha: .4);
+  &:before, &:after{
+    content: '';
+    width: 100%;
+    width: calc(100% + 30px);
+    min-height: 75px;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+  &:before{
+    top: -60px;
+    background-image: url('/assets/images/scroll_top.png');
+  }
+  &:after{
+    bottom: -60px;
+
+    background-image: url('/assets/images/scroll_bottom.png');
+  }
+  &.new_letter{
+    align-content: center;
+  }
+  .title{
+    font-weight: bold;
+  }
   span{
     display: flex;
     justify-content: center;

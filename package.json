@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "server": "json-server --watch ./src/assets/presents.json",
+    "server": "json-server --no-cors --watch ./src/assets/presents.json",
     "test": "ng test"
   },
   "private": true,

@@ -34,12 +34,14 @@
         {
           "name": "Prześcieradło 120x200,",
           "link": "https://allegro.pl/oferta/przescieradlo-jersey-z-gumka-120x200-bawelna-100-10722168313?bi_s=ads&bi_m=listing:mobile:query&bi_c=YjgxNmQ4Y2YtZDM1NS00ZjNmLTlkZjktOTJiZWQ4OTYwYzZmAA&bi_t=ape&referrer=proxy&emission_unit_id=255c7020-eb52-4488-96f5-2c0b00862b57",
-          "additionalInfo": "Bardzo proszę o kolor biały - trzeba wpisać w \"ważne informacje dla sprzedającego\""
+          "additionalInfo": "Bardzo proszę o kolor biały - trzeba wpisać w \"ważne informacje dla sprzedającego\"",
+          "timesPicked": 0
         },
         {
           "name": "Słuchawki do PS4 ,",
           "link": "https://www.euro.com.pl/sluchawki-dla-graczy-pc/natec-genesis-h59.bhtml#afterSearch-s%C5%82uchawki%20genesis%20argon%20400||||product",
-          "additionalInfo": "Prezent do złożenia się z kimś jeśli jest taka potrzeba :)"
+          "additionalInfo": "Prezent do złożenia się z kimś jeśli jest taka potrzeba :)",
+          "timesPicked": 0
         },
         {
           "name": "Końcówka do szczoteczki Oral-B iO,",
@@ -54,7 +56,8 @@
         {
           "name": "Szczotka do włosów,",
           "link": "https://www.douglas.pl/pl/p/5010552217?variant=1017213",
-          "additionalInfo": "Rozmiar Medium"
+          "additionalInfo": "Rozmiar Medium",
+          "timesPicked": 0
         },
         {
           "name": "W razie czego będę zawsze zadowolona z bonu do kaskady :),",
@@ -81,12 +84,13 @@
           "name": "bluza,",
           "link": "https://mabaje.pl/pl/p/Bluza-mis-melange-/3310",
           "additionalInfo": "M lub L",
-          "timesPicked": 1
+          "timesPicked": 0
         },
         {
           "name": "szampon p/w wypadaniu włosów,",
           "link": "https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 0
         }
       ],
       "id": 2
@@ -114,12 +118,14 @@
         {
           "name": "Bon do baltica spa lub masaż twarzy,",
           "link": "",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 0
         },
         {
           "name": "Ampułki do włosów vichy aminexil,",
           "link": "http://ceneo.pl/47636203?se=zEJYJokPW5GRoW-rqr63vMsuYNmaiX-8&gclid=EAIaIQobChMItOj7keS5-wIVjtwYCh3HQAtCEAAYASAAEgJIXfD_BwE",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 0
         },
         {
           "name": "Subskrypcja ps plus na 3 m-ce lub 6 m-cy,",

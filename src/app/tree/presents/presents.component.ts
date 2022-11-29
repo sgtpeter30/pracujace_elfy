@@ -9,12 +9,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class PresentsComponent {
   list: any;
-  listUrl = 'http://localhost:3000/sortedList'
 
   constructor(
     private http: HttpClient,
   ){
-    this.http.get(this.listUrl).subscribe(data => {
+    this.http.get('sortedList').subscribe(data => {
       this.list = data
     })
   }

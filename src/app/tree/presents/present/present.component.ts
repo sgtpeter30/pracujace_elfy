@@ -11,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PresentComponent {
   letter: any;
-  url: string = `http://localhost:3000/sortedList/`
   id: string = '';
   giftClass: string = 'gift'
 
@@ -26,10 +25,10 @@ export class PresentComponent {
     this.getData();
   }
   getData(){
-    this.http.get(this.url+'/'+this.id).subscribe(data => this.letter = data)
+    this.http.get('sortedList/'+this.id).subscribe(data => this.letter = data)
   }
   sendData(){
-    this.http.put(this.url+'/'+this.id, this.letter).subscribe(data => this.letter = data)
+    this.http.put('sortedList/'+this.id, this.letter).subscribe(data => this.letter = data)
   }
   addPresent(item: any){
     item.timesPicked = !item.timesPicked? item.timesPicked = 1 : item.timesPicked + 1

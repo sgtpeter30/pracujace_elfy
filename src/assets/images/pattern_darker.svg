@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="73.0579mm" height="39.6155mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3490 1893"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#243D20}
+    .fil1 {fill:#243D20;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_192860048">
+   <g>
+    <polygon class="fil0" points="1843,945 2151,1268 2690,1262 2398,950 2691,636 2156,625 "/>
+    <polygon class="fil0" points="1646,945 1338,1268 799,1262 1091,950 798,636 1333,625 "/>
+   </g>
+   <g>
+    <polygon class="fil0" points="1744,848 2066,540 2061,1 1748,292 1434,0 1423,535 "/>
+    <polygon class="fil0" points="1744,1045 2066,1353 2061,1891 1748,1600 1434,1893 1423,1358 "/>
+   </g>
+   <polygon class="fil1" points="0,147 34,181 765,912 799,946 765,981 34,1711 0,1746 0,1608 662,946 0,284 "/>
+   <path class="fil1" d="M0 1177l0 -38 0 -38 0 -308 0 -38 0 -38 0 -135 0 -54 0 -54 27 27 420 420 27 27 -27 27 -420 420 -27 27 0 -54 0 -54 0 -135zm0 -76l154 0 0 -308 -154 0 0 308z"/>
+   <polygon class="fil0" points="678,240 799,119 921,240 799,361 "/>
+   <polygon class="fil0" points="2570,240 2691,119 2812,240 2691,361 "/>
+   <polygon class="fil0" points="678,1630 799,1509 921,1630 799,1751 "/>
+   <polygon class="fil0" points="2570,1630 2691,1509 2812,1630 2691,1751 "/>
+   <g>
+    <polygon class="fil1" points="3490,147 3456,181 2725,912 2691,946 2725,981 3456,1711 3490,1746 3490,1609 2828,946 3490,284 "/>
+    <path class="fil1" d="M3490 1177l0 -38 0 -38 0 -308 0 -38 0 -38 0 -135 0 -54 0 -54 -27 27 -420 420 -27 27 27 27 420 420 27 27 0 -54 0 -54 0 -135zm0 -76l-154 0 0 -308 154 0 0 308z"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,10 +1,3 @@
-body{
-  // --background_image: url('/assets/images/o2807066.jpg');
-  // --background_image: url('/assets/images/o2132261.jpg');
-  // --background_image: url('/assets/images/bg_3.jpg');
-  background-image:  url('/assets/images/o2807066.jpg');
-  background-size: cover;
-}
 app-root{
   padding-bottom: 50px;
 }
@@ -12,30 +5,39 @@ h1{
   position: relative;
   width: min-content;
   white-space: nowrap;
-  &:before, &:after{
+  background-color: #243d20;
+  padding: 0 25px;
+  // &:before, &:after{
+  &:before{
     content: '';
-    width: 50px;
+    // width: 50px;
+    // width: 100%;
+    width: calc(100vw - 100px);
+    // width: 100vw;
     height: 50px;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translate(-50%);
     z-index: -1;
     background-image: url('/assets/images/scroll.png');
+    background-image: url('/assets/images/pattern_darker.svg');
+    background-image: url('/assets/images/pattern_light.svg');
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    // background-color: #477640;
+    // background-repeat: no-repeat;
   }
-  &:before{
-    left: -80px;
-  }
-  &:after{
-    right: -80px;
-  }
+}
+body{
+  align-items: stretch;
+  background-image: none;
 }
 main{
   display: flex;
   justify-content: center;
-  align-content: center;
-  align-items: center;
+  align-content: flex-start;
+  align-items: flex-start;
   flex-grow: 0;
   justify-content: space-between;
   flex-basis: 85vw;
@@ -46,10 +48,18 @@ main{
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
   flex-wrap: wrap;
   flex: 0 0 calc(25% - 50px);
+  .times_picked{
+    color: #fff;
+  }
+  .button_wrapper{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
 }
 .gift{
   box-sizing: border-box;
@@ -60,9 +70,10 @@ main{
   flex-wrap: wrap;
   position: relative;
   background-color: #355c2d;
-  background-image: linear-gradient(to bottom right, #477640, #4b7d42, #243d20);
-  background-image: linear-gradient(to bottom right, #4b7d42, #243d20, #477640);
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  // background-image: linear-gradient(to bottom right, #477640, #4b7d42, #243d20);
+  // background-image: linear-gradient(to bottom right, #4b7d42, #243d20, #477640);
+  background: linear-gradient(to bottom right, #8b0606, #530404, #270202);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .45);
   border-radius: 15px;
   margin: 25px;
   padding: 25px;

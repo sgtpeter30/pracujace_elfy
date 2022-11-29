@@ -1,4 +1,4 @@
-<h1>Lista grzecznych dzieci</h1>
+<h1>Listy grzecznych dzieci</h1>
 
 <a class="--primary go_back"  href="" title="Wróć">
   <span>Wróć</span>
@@ -10,9 +10,11 @@
       <span class="title">
         {{item.name}}
       </span>
-      <ng-container *ngFor="let present of item.list">
-        <span>{{present.name}}</span>
-      </ng-container>
+      <ul>
+        <ng-container *ngFor="let present of item.list">
+          <li>{{present.name}}</li>
+        </ng-container>
+      </ul>
     </div>
   </ng-container>
   <div class="child new_letter">
