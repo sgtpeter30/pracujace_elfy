@@ -1,5 +1,11 @@
 {
-  "list": [],
+  "list": [
+    {
+      "Submission Date": "Nov 29, 2022",
+      "Nazywam się:": "Filip",
+      "Lista": "Nazwa prezentu: żeby wszyscy byli zdrowi :*, Link: www.nfz.gov.pl, Dodatkowe informacje:"
+    }
+  ],
   "secondList": [
     {
       "Submission Date": "Nov 23, 2022",
@@ -29,29 +35,32 @@
         {
           "name": "Ręcznik, mogą być nawet dwa,",
           "link": "https://www.action.com/pl-pl/p/rcznik-hotel-royal/",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 1
         },
         {
           "name": "Prześcieradło 120x200,",
           "link": "https://allegro.pl/oferta/przescieradlo-jersey-z-gumka-120x200-bawelna-100-10722168313?bi_s=ads&bi_m=listing:mobile:query&bi_c=YjgxNmQ4Y2YtZDM1NS00ZjNmLTlkZjktOTJiZWQ4OTYwYzZmAA&bi_t=ape&referrer=proxy&emission_unit_id=255c7020-eb52-4488-96f5-2c0b00862b57",
           "additionalInfo": "Bardzo proszę o kolor biały - trzeba wpisać w \"ważne informacje dla sprzedającego\"",
-          "timesPicked": 0
+          "timesPicked": 1
         },
         {
           "name": "Słuchawki do PS4 ,",
           "link": "https://www.euro.com.pl/sluchawki-dla-graczy-pc/natec-genesis-h59.bhtml#afterSearch-s%C5%82uchawki%20genesis%20argon%20400||||product",
           "additionalInfo": "Prezent do złożenia się z kimś jeśli jest taka potrzeba :)",
-          "timesPicked": 0
+          "timesPicked": 1
         },
         {
           "name": "Końcówka do szczoteczki Oral-B iO,",
           "link": "https://allegro.pl/oferta/4-x-oryginalne-koncowki-oral-b-precision-clean-8918159259?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_zdrowie_hb_health_pla_pmax&ev_campaign_id=17997543997&gclid=CjwKCAiAyfybBhBKEiwAgtB7fvYBUYYn0biJuXb9Axe4_1wCWceQyQZ4UL7r6I2oXE4TJtHzEjZ6nBoCWgcQAvD_BwE",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 1
         },
         {
           "name": "Sweter,",
           "link": "https://www.sinsay.com/pl/pl/sweter-z-ozdobnym-splotem-5159o-69x",
-          "additionalInfo": "Kolor turkusowy, rozmiar XXS"
+          "additionalInfo": "Kolor turkusowy, rozmiar XXS",
+          "timesPicked": 1
         },
         {
           "name": "Szczotka do włosów,",
@@ -68,12 +77,13 @@
       "id": 1
     },
     {
-      "name": "Brygida Błaszczyk",
+      "name": "Brygida B",
       "list": [
         {
           "name": "nożyce do drobiu,",
           "link": "https://www.nakrywamy.pl/gerlach-nozyce-kuchenne-do-drobiu-calostalowe?gclid=EAIaIQobChMIq977-rq_-wIVE2gYCh3YkA2NEAAYAiAAEgLc-fD_BwE",
-          "additionalInfo": "do wyboru kilka opcji"
+          "additionalInfo": "do wyboru kilka opcji",
+          "timesPicked": 1
         },
         {
           "name": "nożyce do drobiu,",
@@ -90,18 +100,19 @@
           "name": "szampon p/w wypadaniu włosów,",
           "link": "https://allegro.pl/oferta/kerastase-prevention-szampon-przeciw-wypadaniu-250-12822172108?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&utm_source=google&utm_medium=cpc&utm_campaign=_uzsd_uroda_hb_beauty_pla_pmax&ev_campaign_id=17996266263&gclid=Cj0KCQiA4OybBhCzARIsAIcfn9kjuWscXkBU-BrD53Ed5Jebgg76jJywJJLeOCR8fbPHPy0wV8iCv50aApT3EALw_wcB",
           "additionalInfo": "",
-          "timesPicked": 0
+          "timesPicked": 1
         }
       ],
       "id": 2
     },
     {
-      "name": "Teresa Rosłonkiewicz",
+      "name": "Teresa R",
       "list": [
         {
           "name": "szampon do włosów,",
           "link": "https://www.hairstore.pl/macadamia-professional-vege-szampon-do-wlosow-cienkich-1000ml-p26541.html",
-          "additionalInfo": ""
+          "additionalInfo": "",
+          "timesPicked": 1
         }
       ],
       "id": 3
@@ -125,15 +136,75 @@
           "name": "Ampułki do włosów vichy aminexil,",
           "link": "http://ceneo.pl/47636203?se=zEJYJokPW5GRoW-rqr63vMsuYNmaiX-8&gclid=EAIaIQobChMItOj7keS5-wIVjtwYCh3HQAtCEAAYASAAEgJIXfD_BwE",
           "additionalInfo": "",
-          "timesPicked": 0
+          "timesPicked": 1
         },
         {
           "name": "Subskrypcja ps plus na 3 m-ce lub 6 m-cy,",
           "link": "",
-          "additionalInfo": "Dłuższej na razie nie potrzebuję bo będzie hogwarts legacy:D"
+          "additionalInfo": "Dłuższej na razie nie potrzebuję bo będzie hogwarts legacy:D",
+          "timesPicked": 1
         }
       ],
       "id": 4
+    },
+    {
+      "name": "Filip",
+      "list": [
+        {
+          "name": "żeby wszyscy byli zdrowi :*,",
+          "link": "www.nfz.gov.pl",
+          "additionalInfo": "",
+          "timesPicked": 0
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Piotr B.",
+      "list": [
+        {
+          "name": "Walizka narzędziowa,",
+          "link": "https://www.castorama.pl/zestaw-2-aluminiowych-walizek-opp-13-i-17-id-1038396.html",
+          "additionalInfo": "",
+          "timesPicked": 1
+        },
+        {
+          "name": "Karta podarunkowa Steam,",
+          "link": "https://store.steampowered.com/digitalgiftcards/selectgiftcard?l=polish",
+          "additionalInfo": "Przedmiot wielokrtotnego zakupu :)",
+          "timesPicked": 1
+        },
+        {
+          "name": "Karta podarunkowa Empik,",
+          "link": "https://www.empik.com/karty-prezentowe",
+          "additionalInfo": "Przedmiot wielokrtotnego zakupu :)"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Ingrid",
+      "list": [
+        {
+          "name": "Ołówki z serii. FABER-CASTELL Pitt Graphite Matt,",
+          "link": "https://allegro.pl/oferta/olowek-faber-castell-pitt-graphite-matt-10b-12132458018?fromVariant=12132408528",
+          "additionalInfo": "Po 1 z każdego jakie są dostępne w tej serii (HB, 2B, 4B, 6B, 8B, 10B,12B,14B).",
+          "timesPicked": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "name": "Piotr R",
+      "list": [
+        {
+          "name": "Akcesoria sportowe typu kask na rower, dobre oświetlenie do roweru, okulary do pływania, niestety wszystko na wymiar więc może bon do Decatlona?,",
+          "link": "",
+          "additionalInfo": "",
+          "timesPicked": 2
+        }
+      ],
+      "id": 8
     }
   ]
 }
