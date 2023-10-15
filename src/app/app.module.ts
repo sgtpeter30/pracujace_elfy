@@ -14,6 +14,7 @@ import { PresentComponent } from './tree/presents/present/present.component';
 import { LetterComponent } from './tree/letters/letter/letter.component';
 import { BaseUrlInterceptor } from './http-interceptor';
 import { WriteLetterComponent } from './tree/letters/write-letter/write-letter.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const environment = {
   production: true,
@@ -36,7 +37,7 @@ export const environment = {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: TreeComponent},
       { path: 'tree/letters', component: LettersComponent},

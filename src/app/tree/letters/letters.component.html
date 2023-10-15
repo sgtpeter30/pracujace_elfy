@@ -4,6 +4,12 @@
   <span>Wróć</span>
 </a>
 <main>
+  <div class="child new_letter">
+    <a class="title"
+    [routerLink]="['/tree/letters/write-letter']">
+      Dodaj nowy list
+    </a>
+  </div>
   <ng-container *ngFor="let item of list">
     <!-- <a class="child" href="./letter/{{item.id}}"> -->
     <div class="child">
@@ -17,9 +23,5 @@
       </ul>
     </div>
   </ng-container>
-  <div class="child new_letter">
-    <a class="title" [href]="sanitizer.bypassSecurityTrustUrl('https://eu.jotform.com/form/223227488201048')" target="_blank" rel="noopener">
-      Dodaj nowy list
-    </a>
-  </div>
+  
 </main>

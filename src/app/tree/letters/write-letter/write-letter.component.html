@@ -1,7 +1,36 @@
-<a class="--primary go_back"  href="" title="Wróć">
+<a class="--primary go_back"  [routerLink]="['/tree/letters']" title="Wróć">
   <span>Wróć</span>
 </a>
-<div id="letter">
-  <h1>Drogi mikołaju</h1>
+<main class="top-ribbon">
+  <div id="letter">
+    <h2 class="title">Drogi mikołaju</h2>
 
-</div>
+    <span class="sub-title">Jak co roku przede wszystkim chcę prosić aby cała nasza Rodzina była zdrowa, 
+      szczęśliwa i byśmny mogli przeżyć spokojnie nie tylko te Święta, ale cały ten i nadchodzący rok</span>
+
+      <div id="letter-form">
+        <form [formGroup]="presentsLetter" (ngSubmit)="onSubmit()">
+          <div formArrayName="presentsList" class="presents-list">
+            <div *ngFor="let present of getPresentsList.controls; let firstIndex = index" [formGroupName]="firstIndex">
+              <div>
+                <label for="name">Nazwa prezentu: </label>
+                <input id="name" type="text" formControlName="name">
+              </div>
+              <div>
+                <label for="link">Link: </label>
+                <input id="link" type="text" formControlName="link">
+              </div>
+              <div>
+                <label for="additional">Dodatkowe informacje: </label>
+                <input id="additional" type="text" formControlName="additional">
+              </div>
+              <button class="button add-present" (click)="addPresent()">Dodaj kolejny prezent</button>
+            </div>
+          </div>
+        
+        </form>
+      </div>
+
+  
+  </div>
+</main>
