@@ -14,10 +14,10 @@
     <!-- <a class="child" href="./letter/{{item.id}}"> -->
     <div class="child">
       <span class="title">
-        {{item.name}}
+        {{item.person}}
       </span>
       <ul>
-        <ng-container *ngFor="let present of item.list">
+        <ng-container *ngFor="let present of item.presentsList">
           <li>{{present.name}}</li>
         </ng-container>
       </ul>

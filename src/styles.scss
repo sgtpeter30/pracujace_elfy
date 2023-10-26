@@ -14,10 +14,12 @@
 *, ::after, ::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit; 
+}
+html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: Dancing Script, "Helvetica Neue", sans-serif;
+  font-family: Dancing Script, "Helvetica Neue", sans-serif !important;
   background-color: var(--background);
   background-image: none;
 }

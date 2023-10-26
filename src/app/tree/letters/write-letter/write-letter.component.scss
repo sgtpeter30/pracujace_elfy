@@ -1,75 +1,328 @@
-.top-ribbon{
-  &:before{
-    content: '';
-    width: calc(100vw - 100px);
-    height: 50px;
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: -1;
-    background-image: url('/assets/images/pattern_light.svg');
-    background-position: center;
-    background-size: contain;
-  }
-}
+app-write-letter{
+  --cream-dark: #E1D3C1;
+  // --scrollbarBG: #CFD8DC;
+  --scrollbarBG: var(--cream-dark);
+  // --thumbBG: #90A4AE;
+  --thumbBG: var(--background);
+  --thumbBG: var(--primary);
 
-#letter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  width: calc(85% - 60px);
-  min-height: 35rem;
-  max-height: 65vh;
-  margin: 10rem 30px;
-  padding: 30px 20px;
-  background-color: antiquewhite;
-  background-position: center;
-  transition: all .3s;
-  position: relative;
-  box-shadow: 0 -50px 50px rgba($color: #000000, $alpha: .4), 0 50px 50px rgba($color: #000000, $alpha: .4), inset 0 20px 40px rgba($color: #000000, $alpha: .4), inset 0px -10px 5px rgba($color: #000000, $alpha: .4);
-  &:before, &:after{
-    content: '';
-    width: 100%;
-    width: calc(100% + 30px);
-    min-height: 75px;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
+  @keyframes rolLetterlUp {
+    0% {
+      height: 65vh;
+    }
+    100% {
+      min-height: 0;
+      padding: 0 8rem;
+      height: 0;
+    }
   }
-  &:before{
-    top: -60px;
-    background-image: url('/assets/images/scroll_top.png');
+  @keyframes rollFormUp {
+    0% {
+      height: 33vh;
+    }
+    100% {
+      height: 0;
+    }
   }
-  &:after{
-    bottom: -60px;
+  @keyframes rollUp {
+    0% {
+      // height: 100%;
+    }
+    100% {
+      height: 0;
+    }
+  }
+  @keyframes fanfare {
+    0% {
+      height: 0;
+    }
+    60%{
+      height: 0;
+      bottom: 0;
+    }
+    100% {
+      height: 10rem;
+      bottom: -12rem;
+    }
+  }
 
-    background-image: url('/assets/images/scroll_bottom.png');
+  .top-ribbon{
+    &:before{
+      content: '';
+      width: calc(100vw - 100px);
+      height: 50px;
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: -1;
+      background-image: url('/assets/images/pattern_light.svg');
+      background-position: center;
+      background-size: contain;
+    }
   }
-  #letter-form{
-    overflow-y: auto;
-  }
-  .title{
-    font-weight: bold;
-    background: transparent;
-    color: #333;
-
-  }
-  span{
-    display: flex;
+  
+  #letter{
+    display: grid;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    width: 100%;
+    align-content: flex-start;
+    width: calc(85% - 60px);
+    height: 65vh;
+    min-height: 35rem;
+    max-height: 65vh;
+    margin: 10rem 3rem;
+    padding: 3rem 8rem;
+    background-color: #FAEBD7;
+    background-position: center;
+    transition: all .3s;
+    position: relative;
+    box-shadow: 0 -50px 50px rgba($color: #000000, $alpha: .4), 0 50px 50px rgba($color: #000000, $alpha: .4), inset 0 20px 40px rgba($color: #000000, $alpha: .4), inset 0px -10px 5px rgba($color: #000000, $alpha: .4);
+    .scroll{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 5.5rem;
+      background-position: center;
+      background-repeat: repeat;
+      background-size: contain;
+
+      &:before, &:after{
+        content: '';
+        display: inline-flex;
+        position: relative;
+        width: 100px;
+        height: 5.5rem;
+      }
+      &:before{
+        left: -3rem;
+      }
+      &:after{
+        right: -3rem;
+        justify-content: end;
+      }
+      &.top{
+        top: -4rem;
+        background-image: url('/assets/images/scroll/top_mid.png');
+
+        &:before{
+          content: url('/assets/images/scroll/top_left.png');
+        }
+        &:after{
+          content: url('/assets/images/scroll/top_right.png');
+        }
+      }
+      &.bottom{
+        bottom: -4rem;
+        background-image: url('/assets/images/scroll/bot_mid.png');
+        &:before{
+          content: url('/assets/images/scroll/bot_left.png');
+        }
+        &:after{
+          content: url('/assets/images/scroll/bot_right.png');
+        }
+      }
+    }
+    .title{
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      background: transparent;
+      color: #333;
+    }
+    .sub-title{
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      align-items: center;
+      text-align: center;
+      color: #333;
+      font-size: 24px;
+      width: 100%;
+    }
+    #letter-form{
+      // overflow-y: auto;
+      display: flex;
+      width: 100%;
+      height: 33vh;
+      justify-content: center;
+      form{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-content: space-between;
+        .letter-form-field{
+          .mdc-text-field--filled{
+            background-color: transparent;
+            background-color: var(--cream-dark);
+            label, input, textarea{
+              color: var(--background);
+            }
+          }
+        }
+        .presents-list{
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          align-content: flex-start;
+          justify-content: center;
+          overflow-y: auto;
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          position: relative;
+          // scrollbar styles start
+          
+          scrollbar-width: thin;
+          scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+          &::-webkit-scrollbar {
+            width: 11px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: var(--scrollbarBG);
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: var(--thumbBG) ;
+            border-radius: 6px;
+            border: 3px solid var(--scrollbarBG);
+          }
+          // scrollbar styles end
+
+
+
+          .present-group{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: center;
+            width: 100%;
+            padding: 0 5px;
+            .letter-form-field{
+              // margin: 1rem;
+            }
+            #field-{
+              &name{
+                width: 25%;
+              }
+              &link{
+                width: 15%;
+              }
+              &additional{
+                width: 50%;
+              }
+            }
+          }
+        }
+        .remove-present{
+          display: flex;
+          width: 5%;
+        }
+        .add-present{
+          display: flex;
+          margin-right: auto;
+        }
+      }
+    }
+    #signature{
+      display: flex;
+      width: 100%;
+      margin: auto 0 2rem;
+      position: absolute;
+      right: 20%;
+      bottom: -1.5rem;
+      width: 18rem;
+    }
+    #letter-submit-button{
+      background: none;
+      border: 0;
+      width: 6rem;
+      position: absolute;
+      bottom: -4rem;
+      z-index: 1000;
+
+      cursor: pointer;
+      .stamp{
+        width: 6rem;
+      }
+    }
   }
-  .sub-title{
-    margin-top: 2rem;
+  #health-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--primary);
+    border-radius: 1rem;
+    background: var(--cream-dark);
+
+    &[open]{
+      display: flex;
+    }
+
+    p{
+      width: 100%;
+      text-align: center;
+    }
+    button{
+      margin-top: 2rem;
+    }
   }
+  ::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+  }
+
+
+  #letter.send{
+    // height: 0;
+    
+    animation: rolLetterlUp 2s;
+    animation-fill-mode: forwards;
+
+    &:after{
+      content: 'Dostarczono';
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      width: 10rem;
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+      translate: -50% 0;
+      background-color: var(--primary);
+      clip-path: polygon(0% 0%, 100% 0, 100% 70%, 48% 100%, 0 70%);
+      animation: fanfare 4s;
+      animation-fill-mode: forwards;
+    }
+    .title, .sub-title, #signature{
+      // height: 0;
+      animation: rollUp 2.5s;
+      animation-fill-mode: forwards;
+      // min-height: 0;
+      // padding: 0;
+    }
+    #letter-form{
+      animation: rollFormUp 1.5s;
+      animation-fill-mode: forwards;
+    }
+    
+  }
+  
 }
