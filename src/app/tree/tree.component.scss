@@ -1,8 +1,25 @@
-body{
+:host{ 
   --background_image: url('/assets/images/o623931.jpg');
   background-image: var(--background_image);
   background-size: contain;
   background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+.top-ribbon{
+  &:before{
+    content: '';
+    width: calc(100vw - 100px);
+    height: 50px;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+    background-image: url('/assets/images/pattern_light.svg');
+    background-position: center;
+    background-size: contain;
+  }
 }
 .letters, .presents{
   display: flex;
@@ -31,10 +48,7 @@ body{
 }
 .letters{
   left: 25%;
-  // background: url('/assets/images/gift.png');
 }
 .presents{
   right: 25%;
-  // opacity: .3;
-  // background: url('/assets/images/gift.png');
 }

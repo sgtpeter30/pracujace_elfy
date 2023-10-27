@@ -2,6 +2,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { environment } from 'src/app/app.module';
+import { Person } from 'src/app/models/person.model';
 
 @Component({
   selector: 'app-letters',
@@ -10,12 +11,13 @@ import { environment } from 'src/app/app.module';
   encapsulation: ViewEncapsulation.None
 })
 export class LettersComponent {
-  list: any;
+  list: Person[];
   constructor(
     private http: HttpClient,
     public sanitizer: DomSanitizer
   ){
-    this.http.get('sortedList').subscribe(data => {
+    this.http.get('list').subscribe((data: Person[]) => {
+      console.log(data);
       this.list = data
     })
   }

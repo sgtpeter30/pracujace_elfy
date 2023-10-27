@@ -1,9 +1,9 @@
-<h1 *ngIf="letter">{{letter!.name}}</h1>
+<h1 *ngIf="letter">{{letter!.person}}</h1>
 <a class="--primary go_back"  routerLink="../.." title="Wróć">
   <span>Wróć</span>
 </a>
 <main *ngIf="letter">
-  <ng-container *ngFor="let item of letter.list">
+  <ng-container *ngFor="let item of letter.presentsList">
     <div class="gift_wrapper" *ngIf="item.name">
       <div class="{{giftClass}}" [ngClass]="{picked: item.timesPicked}">
 

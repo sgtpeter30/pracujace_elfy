@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { Person } from 'src/app/models/person.model';
 
 @Component({
   selector: 'app-present',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class PresentComponent {
-  letter: any;
+  letter: Person;
   id: string = '';
   giftClass: string = 'gift'
 
@@ -25,10 +26,10 @@ export class PresentComponent {
     this.getData();
   }
   getData(){
-    this.http.get('sortedList/'+this.id).subscribe(data => this.letter = data)
+    this.http.get('list/'+this.id).subscribe((data: Person) => this.letter = data)
   }
   sendData(){
-    this.http.put('sortedList/'+this.id, this.letter).subscribe(data => this.letter = data)
+    this.http.put('list/'+this.id, this.letter).subscribe((data: Person) => this.letter = data)
   }
   addPresent(item: any){
     item.timesPicked = !item.timesPicked? item.timesPicked = 1 : item.timesPicked + 1

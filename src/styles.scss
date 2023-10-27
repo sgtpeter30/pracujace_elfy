@@ -11,25 +11,19 @@
 [app-]{
   box-sizing: border-box;
 }
-html,
-body, app-root {
-  height: 100%;
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
 }
-app-root *{
-  max-width: 100vw;
-  box-sizing: border-box;
-}
+html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: Dancing Script, "Helvetica Neue", sans-serif;
+  font-family: Dancing Script, "Helvetica Neue", sans-serif !important;
   background-color: var(--background);
   background-image: none;
 }
-:host, :host-context{
-  max-width: 100vw;
-  box-sizing: border-box;
-}
-body, app-root{
+app-root{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

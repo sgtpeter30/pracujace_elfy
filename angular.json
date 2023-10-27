@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/themes/christmas.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -71,6 +72,9 @@
               "browserTarget": "christmas_2022:build:development"
             }
           },
+          "options": {
+            "disableHostCheck": true
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -93,6 +97,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/themes/christmas.scss",
               "src/styles.scss"
             ],
             "scripts": []
