@@ -1,41 +1,5 @@
 {
   "list": [
-    {
-      "person": "Pitor",
-      "submissionDate": "2023-10-24T22:24:27.803Z",
-      "presentsList": [
-        {
-          "name": "test",
-          "link": "http://localhost:4200/tree/letters/write-letter",
-          "additionalInfo": "test prezent",
-          "timesPicked": 1
-        }
-      ],
-      "id": 1
-    },
-    {
-      "person": "Tester",
-      "submissionDate": "2023-10-24T22:25:30.853Z",
-      "presentsList": [
-        {
-          "name": "Kolejny test",
-          "link": "https://www.youtube.com/watch?v=lwYWMHVwYrs&t=2137s",
-          "additionalInfo": "A kup mi coś"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "person": "Test",
-      "submissionDate": "2023-10-26T21:47:52.075Z",
-      "presentsList": [
-        {
-          "name": "test",
-          "link": "",
-          "additionalInfo": ""
-        }
-      ],
-      "id": 3
-    }
+
   ]
 }

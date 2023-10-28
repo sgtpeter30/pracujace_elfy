@@ -24,6 +24,16 @@ export class BlackListService {
     'A może chociaż jakieś konkretne tabletki, albo masaż?'
   ]
 
+  private otherRelated:string[] = [
+    'wszyscy szczęśliwi byli',
+    'wszyscy byli',
+    'nie potrzebuje',
+  ]
+
+  private otherText: string[] = [
+    'A mikołaj tak ciężko pracuje, ładnie to tak?'
+  ];
+
   public isOnBlackList(name: string, description: string):BlackListResponse{
     let response: BlackListResponse = {isBlackList: false, dialogText: ''};
     this.healthRelated.forEach(value=>{
@@ -32,6 +42,15 @@ export class BlackListService {
         response = {
           isBlackList: true,
           dialogText: this.healthTexts[randIndex],
+        }
+      }
+    })
+    this.otherRelated.forEach(value=>{
+      if(name.includes(value) || description.includes(value)){
+        const randIndex = Math.floor(Math.random() * (this.otherText.length - 0));
+        response = {
+          isBlackList: true,
+          dialogText: this.otherText[randIndex],
         }
       }
     })

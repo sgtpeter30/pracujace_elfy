@@ -23,7 +23,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 export const environment = {
   production: true,
   // apiUrl: "https://straszna-fabryka-swietego-mikolaja.loca.lt"
-  apiUrl: "http://localhost:3000"
+  // apiUrl: "http://localhost:3000"
+  apiUrl: "https://assuring-apparently-foal.ngrok-free.app"
 };
 
 @NgModule({

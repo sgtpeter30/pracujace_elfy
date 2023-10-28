@@ -94,6 +94,8 @@ app-write-letter{
         position: relative;
         width: 100px;
         height: 5.5rem;
+        background-size: 7rem 5.5rem;
+        background-repeat: no-repeat;
       }
       &:before{
         left: -3rem;
@@ -107,20 +109,24 @@ app-write-letter{
         background-image: url('/assets/images/scroll/top_mid.png');
 
         &:before{
-          content: url('/assets/images/scroll/top_left.png');
+          // content: url('/assets/images/scroll/top_left.png');
+          background-image: url('/assets/images/scroll/top_left.png');
         }
         &:after{
-          content: url('/assets/images/scroll/top_right.png');
+          // content: url('/assets/images/scroll/top_right.png');
+          background-image: url('/assets/images/scroll/top_right.png');
         }
       }
       &.bottom{
         bottom: -4rem;
         background-image: url('/assets/images/scroll/bot_mid.png');
         &:before{
-          content: url('/assets/images/scroll/bot_left.png');
+          // content: url('/assets/images/scroll/bot_left.png');
+          background-image: url('/assets/images/scroll/bot_left.png');
         }
         &:after{
-          content: url('/assets/images/scroll/bot_right.png');
+          // content: url('/assets/images/scroll/bot_right.png');
+          background-image: url('/assets/images/scroll/bot_right.png');
         }
       }
     }
