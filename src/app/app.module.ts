@@ -23,8 +23,8 @@ export const environment = {
   production: true,
   // apiUrl: "https://straszna-fabryka-swietego-mikolaja.loca.lt"
   // apiUrl: "http://localhost:3000"
-  apiUrl: "http://localhost:3000/api"
-  // apiUrl: "https://assuring-apparently-foal.ngrok-free.app"
+  // apiUrl: "http://localhost:3000/api"
+  apiUrl: "https://assuring-apparently-foal.ngrok-free.app/api"
 };
 
 @NgModule({
