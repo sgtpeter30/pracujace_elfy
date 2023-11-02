@@ -62,6 +62,7 @@ export class WriteLetterComponent {
       name: ['', Validators.required],
       link: '',
       additionalInfo: '',
+      timesPicked: '',
     });
     this.getPresentsList.push(present);
   }
@@ -69,10 +70,20 @@ export class WriteLetterComponent {
   resumeLetter(letter: Person){
     this.presentsLetter.controls.person.setValue(letter.person);
     letter.presentsList.forEach((present: Present) =>{
+      const disabled = present.timesPicked > 0;
       const oldPresent = this.fb.group({
-        name: [present.name, Validators.required],
-        link: present.link,
-        additionalInfo: present.additionalInfo,
+        name: [{
+          value: present.name, 
+          disabled: disabled,
+        }, Validators.required],
+        link: [{
+          value: present.link,
+          disabled: disabled,
+        }],
+        additionalInfo: [{
+          value: present.additionalInfo,
+          disabled: disabled,
+        }],
       });
       this.getPresentsList.push(oldPresent);
     })

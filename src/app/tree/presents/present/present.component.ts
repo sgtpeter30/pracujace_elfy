@@ -38,7 +38,9 @@ export class PresentComponent {
   }
 
   sendData(){
-    this.http.put('modify-letter/'+this.id, this.letter).subscribe((data: Person) => this.letter = data)
+    this.http.put('modify-letter/'+this.id, this.letter).subscribe((data: Person) => {
+      console.log(data)
+    })
   }
 
   addPresent(item: any){
