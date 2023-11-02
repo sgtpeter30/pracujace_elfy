@@ -1,116 +1,117 @@
 app-root{
   padding-bottom: 50px;
 }
-h1{
-  position: relative;
-  width: min-content;
-  white-space: nowrap;
-  background-color: #243d20;
-  padding: 0 25px;
-  // &:before, &:after{
-  &:before{
-    content: '';
-    // width: 50px;
-    // width: 100%;
-    width: calc(100vw - 100px);
-    // width: 100vw;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: -1;
-    background-image: url('/assets/images/scroll.png');
-    background-image: url('/assets/images/pattern_darker.svg');
-    background-image: url('/assets/images/pattern_light.svg');
-    background-position: center;
-    background-size: contain;
-    // background-color: #477640;
-    // background-repeat: no-repeat;
-  }
-}
-body{
-  align-items: stretch;
-  background-image: none;
-}
-main{
-  display: flex;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
-  flex-grow: 0;
-  justify-content: space-between;
-  flex-basis: 85vw;
-  width: 1900px;
-  box-sizing: border-box;
-}
-.gift_wrapper{
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex: 0 0 calc(25% - 50px);
-  .times_picked{
-    color: #fff;
-  }
-  .button_wrapper{
-    display: flex;
-    width: 100%;
-    margin-top: 15px;
-    justify-content: space-between;
+app-present{
+
+  h1{
+    position: relative;
+    width: min-content;
+    white-space: nowrap;
+    background-color: #243d20;
     padding: 0 25px;
-  }
-}
-.gift{
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  background-color: #355c2d;
-  // background-image: linear-gradient(to bottom right, #477640, #4b7d42, #243d20);
-  // background-image: linear-gradient(to bottom right, #4b7d42, #243d20, #477640);
-  background: linear-gradient(to bottom right, #8b0606, #530404, #270202);
-  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .45);
-  border-radius: 15px;
-  margin: 25px;
-  padding: 25px;
-  margin-top: 75px;
-  min-height: 350px;
-  &.picked{
+    // &:before, &:after{
     &:before{
       content: '';
-      // background: red;
-      background-image: url('/assets/images/bow.png');
+      // width: 50px;
+      // width: 100%;
+      width: calc(100vw - 100px);
+      // width: 100vw;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: -1;
+      background-image: url('/assets/images/scroll.png');
+      background-image: url('/assets/images/pattern_darker.svg');
+      background-image: url('/assets/images/pattern_light.svg');
       background-position: center;
       background-size: contain;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      position: absolute;
-      top: -60px;
+      // background-color: #477640;
+      // background-repeat: no-repeat;
     }
   }
-  &>div, a{
+  body{
+    align-items: stretch;
+    background-image: none;
+  }
+  main{
     display: flex;
     justify-content: center;
+    align-content: flex-start;
     align-items: flex-start;
-    flex-wrap: wrap;
-    color: #fff;
-    // width: 100%;
+    flex-grow: 0;
+    flex-basis: 85vw;
+    width: 1900px;
+    box-sizing: border-box;
   }
-  .value{
-    font-family: Arial;
-    font-weight: bold;
-    text-align: center;
-  }
-  .title{
+  .gift_wrapper{
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
-    text-align: center;
-    width: 100%;
-    padding-top: 15px;
+    flex-wrap: wrap;
+    flex: 0 0 calc(25% - 50px);
+    .times_picked{
+      color: #fff;
+    }
+    .button_wrapper{
+      display: flex;
+      width: 100%;
+      margin-top: 15px;
+      justify-content: space-between;
+      padding: 0 25px;
+    }
+  }
+  .gift{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #355c2d;
+    // background-image: linear-gradient(to bottom right, #477640, #4b7d42, #243d20);
+    // background-image: linear-gradient(to bottom right, #4b7d42, #243d20, #477640);
+    background: linear-gradient(to bottom right, #8b0606, #530404, #270202);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, .45);
+    border-radius: 15px;
+    margin: 25px;
+    padding: 25px;
+    margin-top: 75px;
+    min-height: 350px;
+    &.picked{
+      &:before{
+        content: '';
+        background-image: url('/assets/images/bow.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: -60px;
+      }
+    }
+    &>div, a{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      color: #fff;
+      // width: 100%;
+    }
+    .value{
+      font-family: Arial;
+      font-weight: bold;
+      text-align: center;
+    }
+    .title{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      padding-top: 15px;
+    }
   }
 }

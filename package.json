@@ -9,7 +9,8 @@
     "server": "json-server --no-cors --watch ./src/assets/presents.json",
     "expose": "lt --port 4200 --subdomain pracujace-elfy",
     "exposeServer": "lt --port 3000 --subdomain biegun-polnocny",
-    "test": "ng test"
+    "test": "ng test",
+    "backendServer": "nodemon server.js"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +26,10 @@
     "@angular/platform-browser": "^16.2.8",
     "@angular/platform-browser-dynamic": "^16.2.8",
     "@angular/router": "^16.2.8",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
     "json-server": "^0.17.4",
+    "mongoose": "^8.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
@@ -39,6 +43,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "nodemon": "^3.0.1",
     "typescript": "~5.1.6"
   }
 }

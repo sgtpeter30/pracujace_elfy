@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="73.0579mm" height="39.6155mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 35255 19117"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#477640}
+    .fil1 {fill:#477640;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_197442464">
+   <g>
+    <polygon class="fil0" points="18618,9550 21730,12805 27167,12752 24227,9593 27180,6420 21779,6313 "/>
+    <polygon class="fil0" points="16624,9550 13512,12805 8075,12752 11015,9593 8063,6420 13463,6313 "/>
+   </g>
+   <g>
+    <polygon class="fil0" points="17612,8561 20867,5450 20814,13 17655,2953 14482,0 14375,5400 "/>
+    <polygon class="fil0" points="17612,10556 20867,13667 20814,19104 17655,16164 14482,19117 14375,13717 "/>
+   </g>
+   <polygon class="fil1" points="0,1484 347,1830 7729,9212 8075,9559 7729,9906 347,17287 0,17634 0,16247 6689,9559 0,2870 "/>
+   <path class="fil1" d="M0 11888l0 -386 0 -386 0 -3115 0 -386 0 -386 0 -1366 0 -546 0 -546 273 273 4241 4241 273 273 -273 273 -4241 4242 -273 273 0 -546 0 -546 0 -1366zm0 -772l1557 0 0 -3115 -1557 0 0 3115z"/>
+   <polygon class="fil0" points="6850,2423 8075,1198 9300,2423 8075,3648 "/>
+   <polygon class="fil0" points="25955,2423 27180,1198 28405,2423 27180,3648 "/>
+   <polygon class="fil0" points="6850,16463 8075,15238 9300,16463 8075,17688 "/>
+   <polygon class="fil0" points="25955,16463 27180,15238 28405,16463 27180,17688 "/>
+   <g>
+    <polygon class="fil1" points="35255,1484 34908,1831 27526,9213 27180,9559 27526,9906 34908,17288 35255,17634 35255,16247 28566,9559 35255,2871 "/>
+    <path class="fil1" d="M35255 11888l0 -386 0 -386 0 -3115 0 -386 0 -386 0 -1366 0 -546 0 -546 -273 273 -4241 4241 -273 273 273 273 4241 4242 273 273 0 -546 0 -546 0 -1366zm0 -772l-1557 0 0 -3115 1557 0 0 3115z"/>
+   </g>
+  </g>
+ </g>
+</svg>

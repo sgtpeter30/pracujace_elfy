@@ -13,9 +13,9 @@
   <ng-container *ngFor="let item of list">
     <!-- <a class="child" href="./letter/{{item.id}}"> -->
     <div class="child">
-      <span class="title">
+      <a class="title" [routerLink]="['/tree/letters/write-letter', item.id]">
         {{item.person}}
-      </span>
+      </a>
       <ul>
         <ng-container *ngFor="let present of item.presentsList">
           <li>{{present.name}}</li>

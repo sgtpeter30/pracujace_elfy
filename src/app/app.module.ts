@@ -11,7 +11,6 @@ import { TreeComponent } from './tree/tree.component';
 import { LettersComponent } from './tree/letters/letters.component';
 import { PresentsComponent } from './tree/presents/presents.component';
 import { PresentComponent } from './tree/presents/present/present.component';
-import { LetterComponent } from './tree/letters/letter/letter.component';
 import { BaseUrlInterceptor } from './http-interceptor';
 import { WriteLetterComponent } from './tree/letters/write-letter/write-letter.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,7 +23,8 @@ export const environment = {
   production: true,
   // apiUrl: "https://straszna-fabryka-swietego-mikolaja.loca.lt"
   // apiUrl: "http://localhost:3000"
-  apiUrl: "https://assuring-apparently-foal.ngrok-free.app"
+  apiUrl: "http://localhost:3000/api"
+  // apiUrl: "https://assuring-apparently-foal.ngrok-free.app"
 };
 
 @NgModule({
@@ -35,7 +35,6 @@ export const environment = {
     LettersComponent,
     PresentsComponent,
     PresentComponent,
-    LetterComponent,
     WriteLetterComponent,
   ],
   imports: [
@@ -50,7 +49,7 @@ export const environment = {
     RouterModule.forRoot([
       { path: '', component: TreeComponent},
       { path: 'tree/letters', component: LettersComponent},
-      { path: 'tree/letters/letter/:id', component: LetterComponent},
+      { path: 'tree/letters/write-letter/:id', component: WriteLetterComponent},
       { path: 'tree/letters/write-letter', component: WriteLetterComponent},
       { path: 'tree/presents', component: PresentsComponent},
       { path: 'tree/presents/present/:id', component: PresentComponent},

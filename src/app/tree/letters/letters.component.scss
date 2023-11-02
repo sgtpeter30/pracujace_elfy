@@ -77,7 +77,7 @@ app-letters{
     .title{
       font-weight: bold;
     }
-    span{
+    span, a{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -85,6 +85,9 @@ app-letters{
       color: #333;
       font-size: 24px;
       width: 100%;
+    }
+    a{
+      color: var(--primary)
     }
   }
 }

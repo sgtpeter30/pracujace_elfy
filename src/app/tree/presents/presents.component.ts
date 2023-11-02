@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ViewEncapsulation } from '@angular/core';
+import { map } from 'rxjs';
 import { Person } from 'src/app/models/person.model';
 
 @Component({
@@ -14,7 +15,16 @@ export class PresentsComponent {
   constructor(
     private http: HttpClient,
   ){
-    this.http.get('list').subscribe((data: Person[]) => {
+    this.http.get('list-person')
+    .pipe(map((data: any)=>{
+      return data.map(post => {
+        return {
+          id: post._id,
+          ...post
+        }
+      })
+    }))
+    .subscribe((data: Person[]) => {
       this.list = data
     })
   }

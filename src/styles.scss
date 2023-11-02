@@ -8,6 +8,11 @@
   src: url('/assets/fonts/DancingScript-VariableFont_wght.ttf') format("truetype-variations");
   font-weight: 1 999;
 }
+@font-face {
+  font-family: 'Marck Script';
+  src: url('/assets/fonts/MarckScript-Regular.ttf') format("truetype-variations");
+  font-weight: 1 999;
+}
 [app-]{
   box-sizing: border-box;
 }
@@ -19,7 +24,7 @@
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: Dancing Script, "Helvetica Neue", sans-serif !important;
+  font-family: Marck Script, "Helvetica Neue", sans-serif !important;
   background-color: var(--background);
   background-image: none;
 }
