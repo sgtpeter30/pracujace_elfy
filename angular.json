@@ -72,9 +72,6 @@
               "browserTarget": "christmas_2022:build:development"
             }
           },
-          "options": {
-            "disableHostCheck": true
-          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

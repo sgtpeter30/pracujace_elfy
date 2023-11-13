@@ -16,17 +16,17 @@
           <div *ngFor="let present of getPresentsList.controls; let firstIndex = index" [formGroupName]="firstIndex" class="present-group">
             <mat-form-field id="field-name" class="letter-form-field">
               <mat-label for="name">Nazwa prezentu: </mat-label>
-              <input id="name" type="text" formControlName="name" matInput>
+              <input id="name" type="text" formControlName="name" matInput [readonly]="present.get('timesPicked').value > 0" >
             </mat-form-field>
             <mat-form-field id="field-link" class="letter-form-field">
               <mat-label for="link">Link: </mat-label>
-              <input id="link" type="text" formControlName="link" matInput>
+              <input id="link" type="text" formControlName="link" matInput [readonly]="present.get('timesPicked').value > 0">
             </mat-form-field>
             <mat-form-field id="field-additional" class="letter-form-field">
               <mat-label for="additionalInfo">Dodatkowe informacje: </mat-label>
-              <textarea matInput id="additionalInfo" formControlName="additionalInfo" matInput></textarea>
+              <textarea matInput [readonly]="present.get('timesPicked').value > 0" id="additionalInfo" formControlName="additionalInfo"></textarea>
             </mat-form-field>
-            <button mat-raised-button color="primary" class="button remove-present" (click)="removePresent(firstIndex)" matTooltip="Usuń prezent">-</button>
+            <button mat-raised-button color="primary" class="button remove-present"  (click)="removePresent(firstIndex)" matTooltip="Usuń prezent" [disabled]="present.get('timesPicked').value > 0">-</button>
           </div>
           <button mat-raised-button color="accent" class="button add-present" (click)="addPresent()" matTooltip="Dodaj kolejny prezent">+</button>
         </div>

@@ -70,21 +70,14 @@ export class WriteLetterComponent {
   resumeLetter(letter: Person){
     this.presentsLetter.controls.person.setValue(letter.person);
     letter.presentsList.forEach((present: Present) =>{
-      const disabled = present.timesPicked > 0;
       const oldPresent = this.fb.group({
-        name: [{
-          value: present.name, 
-          disabled: disabled,
-        }, Validators.required],
-        link: [{
-          value: present.link,
-          disabled: disabled,
-        }],
-        additionalInfo: [{
-          value: present.additionalInfo,
-          disabled: disabled,
-        }],
+        name: [present.name, Validators.required],
+        link: present.link,
+        additionalInfo: present.additionalInfo,
+        timesPicked: present.timesPicked
       });
+      console.log(oldPresent.value);
+      
       this.getPresentsList.push(oldPresent);
     })
     
