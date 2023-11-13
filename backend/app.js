@@ -73,7 +73,7 @@ app.put('/api/modify-letter/:id', (req, res, next)=>{
   }, req.body)
     .then((result)=>{
       console.log(result);
-      res.status(200).json(result);
+      res.status(200).json();
     })
     .catch(err => {
       console.log(err);
