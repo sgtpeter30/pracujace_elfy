@@ -2,14 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const authData = require('auth.js')
 
 const Person = require('./models/person');
 const { log } = require('console');
 
 const app = express();
 
-// mongodb+srv://santaClaus:<password>@north-pole.c1dzoq0.mongodb.net/?retryWrites=true&w=majority
-mongoose.connect('mongodb+srv://santaClaus:7mMpYbhXZbDwOCEr@north-pole.c1dzoq0.mongodb.net/christmas-letters?retryWrites=true&w=majority')
+mongoose.connect(authData.mongooseAdress)
   .then(() => {
     console.log("connected to DB");
   })
