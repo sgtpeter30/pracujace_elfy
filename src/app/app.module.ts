@@ -1,4 +1,4 @@
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -27,40 +27,34 @@ export const environment = {
   // apiUrl: "https://assuring-apparently-foal.ngrok-free.app/api"
 };
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    TreeComponent,
-    LettersComponent,
-    PresentsComponent,
-    PresentComponent,
-    WriteLetterComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatInputModule,
-    MatDialogModule,
-    RouterModule.forRoot([
-      { path: '', component: TreeComponent},
-      { path: 'tree/letters', component: LettersComponent},
-      { path: 'tree/letters/write-letter/:id', component: WriteLetterComponent},
-      { path: 'tree/letters/write-letter', component: WriteLetterComponent},
-      { path: 'tree/presents', component: PresentsComponent},
-      { path: 'tree/presents/present/:id', component: PresentComponent},
-      { path: 'admin', component: HomeComponent},
-    ]),
-    BrowserAnimationsModule,
-  ],
-  providers: [
-    { provide: "BASE_API_URL", useValue: environment.apiUrl },
-    { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        TreeComponent,
+        LettersComponent,
+        PresentsComponent,
+        PresentComponent,
+        WriteLetterComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatInputModule,
+        MatDialogModule,
+        RouterModule.forRoot([
+            { path: '', component: TreeComponent },
+            { path: 'tree/letters', component: LettersComponent },
+            { path: 'tree/letters/write-letter/:id', component: WriteLetterComponent },
+            { path: 'tree/letters/write-letter', component: WriteLetterComponent },
+            { path: 'tree/presents', component: PresentsComponent },
+            { path: 'tree/presents/present/:id', component: PresentComponent },
+            { path: 'admin', component: HomeComponent },
+        ]),
+        BrowserAnimationsModule], providers: [
+        { provide: "BASE_API_URL", useValue: environment.apiUrl },
+        { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
