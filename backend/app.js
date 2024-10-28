@@ -19,7 +19,7 @@ mongoose.connect(authData.mongooseAdress)
 
 app.use(bodyParser.json());
 
-app.use('/', express.static(path.join(__dirname, "christmas")))
+app.use('/', express.static(path.join(__dirname, "pracujace_elfy")))
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', "*");
@@ -91,8 +91,7 @@ app.post('/api/send-letter', (req, res, next) => {
 
 app.use((req, res, next)=>{
   console.log("index?");
-  // res.sendFile(path.join(__dirname, "christmas, index.html"))
-  res.sendFile(path.join("./christmas/index.html"), {root: 'backend'})
+  res.sendFile(path.join("./pracujace_elfy/index.html"), {root: 'backend'})
 });
 
 module.exports = app;

@@ -1,14 +1,11 @@
 {
-  "name": "christmas-2022",
+  "name": "pracujace-elfy",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "server": "json-server --no-cors --watch ./src/assets/presents.json",
-    "expose": "lt --port 4200 --subdomain pracujace-elfy",
-    "exposeServer": "lt --port 3000 --subdomain biegun-polnocny",
     "test": "ng test",
     "backendServer": "nodemon server.js"
   },

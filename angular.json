@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "christmas_2022": {
+    "pracujace_elfy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "backend/christmas",
+            "outputPath": "backend/pracujace_elfy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/themes/christmas.scss",
+              "src/assets/themes/pracujace_elfy.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "christmas_2022:build:production"
+              "buildTarget": "pracujace_elfy:build:production"
             },
             "development": {
-              "buildTarget": "christmas_2022:build:development"
+              "buildTarget": "pracujace_elfy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "christmas_2022:build"
+            "buildTarget": "pracujace_elfy:build"
           }
         },
         "test": {
@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/themes/christmas.scss",
+              "src/assets/themes/pracujace_elfy.scss",
               "src/styles.scss"
             ],
             "scripts": []
