@@ -15,15 +15,17 @@ import { BaseUrlInterceptor } from './http-interceptor';
 import { WriteLetterComponent } from './tree/letters/write-letter/write-letter.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button'; 
-import {MatTooltipModule} from '@angular/material/tooltip'; 
-import {MatInputModule} from '@angular/material/input'; 
-import {MatDialogModule} from '@angular/material/dialog'; 
+import { MatTooltipModule } from '@angular/material/tooltip'; 
+import { MatInputModule } from '@angular/material/input'; 
+import { MatDialogModule } from '@angular/material/dialog'; 
+import { LoginComponent } from './login/login.component';
+import { AuthInterceptorService, PermissionsService, TranslationService, UserService } from 'pt-core';
 
 export const environment = {
   production: true,
   // apiUrl: "https://straszna-fabryka-swietego-mikolaja.loca.lt"
   // apiUrl: "http://localhost:3000"
-  apiUrl: "http://localhost:3000/api"
+  apiUrl: "http://localhost:2412/api"
   // apiUrl: "https://assuring-apparently-foal.ngrok-free.app/api"
 };
 
@@ -44,7 +46,8 @@ export const environment = {
         MatInputModule,
         MatDialogModule,
         RouterModule.forRoot([
-            { path: '', component: TreeComponent },
+            { path: '', component: LoginComponent },
+            { path: 'home', component: TreeComponent },
             { path: 'tree/letters', component: LettersComponent },
             { path: 'tree/letters/write-letter/:id', component: WriteLetterComponent },
             { path: 'tree/letters/write-letter', component: WriteLetterComponent },
@@ -52,7 +55,9 @@ export const environment = {
             { path: 'tree/presents/present/:id', component: PresentComponent },
             { path: 'admin', component: HomeComponent },
         ]),
-        BrowserAnimationsModule], providers: [
+        BrowserAnimationsModule
+    ], 
+    providers: [
         { provide: "BASE_API_URL", useValue: environment.apiUrl },
         { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true },
         provideHttpClient(withInterceptorsFromDi())

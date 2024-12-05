@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: (
+ 50: #f7e6e8,
+ 100: #ecc2c4,
+ 200: #ce8885,
+ 300: #b85d58,
+ 400: #b93d33,
+ 500: #b52b17,
+ 600: #a82218,
+ 700: #981913,
+ 800: #8b130d,
+ 900: #7c0a02,
+ contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+  )
+);
+$my-accent: (
+   50: #e3efe7,
+   100: #bbd8c4,
+   200: #93bf9f,
+   300: #6fa67d,
+   400: #5a9467,
+   500: #4c8354,
+   600: #45764b,
+   700: #3c673f,
+   800: #335834,
+   900: #243d20,
+   contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+  )
+);
+$my-theme-primary: mat.m2-define-palette($my-primary, 900);
+// $my-theme-accent: mat.m2-define-palette($mat-green, 900);
+$my-theme-accent: mat.m2-define-palette(mat.$m2-green-palette, 900);
+$my-theme-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$my-theme: mat.m2-define-dark-theme((
+  color: (
+    primary: $my-theme-primary, 
+    accent: $my-theme-accent,
+    warn: $my-theme-warn
+  )
+));
+
+@include mat.all-component-themes($my-theme);
