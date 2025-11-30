@@ -43,3 +43,4 @@ Thumbs.db
 
 # other
 /backend/auth.js
+.env

@@ -3,7 +3,8 @@ import { Component, Inject, inject, ViewChild } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { InputFieldComponent, LiveFormBuilder, LiveFormComponent, LiveFormModel, User, UserService } from 'pt-core';
+import { InputFieldComponent, LiveFormBuilder, LiveFormComponent, LiveFormModel } from 'pt-core';
+import { User, UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -40,7 +41,7 @@ export class LoginComponent {
           label: 'Hasło',
           component: InputFieldComponent,
           inputType: 'password',
-          validators: ()=> [Validators.required]
+          validators: ()=> Validators.required
         })
       },
     }
@@ -49,6 +50,8 @@ export class LoginComponent {
   protected async loginUser(){
     this.showLoginLoader = true;
     const formValue = this.loginForm.getValueIfValid();
+    console.log("User")
+    console.log(formValue)
     if(formValue){
       await this.userService.loginUser(formValue as User);
       this.showLoginLoader = false;
