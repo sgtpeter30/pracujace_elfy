@@ -5,12 +5,12 @@
 </a>
 
 <main>
-  <ng-container *ngFor="let item of list">
+  @for (item of list; track item) {
     <!-- <a class="child" href="./letter/{{item.id}}"> -->
     <a class="child" routerLink="./present/{{item.id}}">
       <span>
         {{item.person}}
       </span>
     </a>
-  </ng-container>
+  }
 </main>

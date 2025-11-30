@@ -6,28 +6,30 @@
     <div class="scroll top"></div>
     <h2 class="title">Drogi mikołaju</h2>
 
-    <span class="sub-title">Jak co roku przede wszystkim chcę prosić aby cała nasza Rodzina była zdrowa, 
+    <span class="sub-title">Jak co roku przede wszystkim chcę prosić aby cała nasza Rodzina była zdrowa,
       szczęśliwa i byśmy mogli przeżyć spokojnie nie tylko te Święta, ale cały nadchodzący rok
     </span>
 
     <div id="letter-form">
       <form [formGroup]="presentsLetter">
         <div formArrayName="presentsList" class="presents-list">
-          <div *ngFor="let present of getPresentsList.controls; let firstIndex = index" [formGroupName]="firstIndex" class="present-group">
-            <mat-form-field id="field-name" class="letter-form-field">
-              <mat-label for="name">Nazwa prezentu: </mat-label>
-              <input id="name" type="text" formControlName="name" matInput [readonly]="present.get('timesPicked').value > 0" >
-            </mat-form-field>
-            <mat-form-field id="field-link" class="letter-form-field">
-              <mat-label for="link">Link: </mat-label>
-              <input id="link" type="text" formControlName="link" matInput [readonly]="present.get('timesPicked').value > 0">
-            </mat-form-field>
-            <mat-form-field id="field-additional" class="letter-form-field">
-              <mat-label for="additionalInfo">Dodatkowe informacje: </mat-label>
-              <textarea matInput [readonly]="present.get('timesPicked').value > 0" id="additionalInfo" formControlName="additionalInfo"></textarea>
-            </mat-form-field>
-            <button mat-raised-button color="primary" class="button remove-present"  (click)="removePresent(firstIndex)" matTooltip="Usuń prezent" [disabled]="present.get('timesPicked').value > 0">-</button>
-          </div>
+          @for (present of getPresentsList.controls; track present; let firstIndex = $index) {
+            <div [formGroupName]="firstIndex" class="present-group">
+              <mat-form-field id="field-name" class="letter-form-field">
+                <mat-label for="name">Nazwa prezentu: </mat-label>
+                <input id="name" type="text" formControlName="name" matInput [readonly]="present.get('timesPicked').value > 0" >
+              </mat-form-field>
+              <mat-form-field id="field-link" class="letter-form-field">
+                <mat-label for="link">Link: </mat-label>
+                <input id="link" type="text" formControlName="link" matInput [readonly]="present.get('timesPicked').value > 0">
+              </mat-form-field>
+              <mat-form-field id="field-additional" class="letter-form-field">
+                <mat-label for="additionalInfo">Dodatkowe informacje: </mat-label>
+                <textarea matInput [readonly]="present.get('timesPicked').value > 0" id="additionalInfo" formControlName="additionalInfo"></textarea>
+              </mat-form-field>
+              <button mat-raised-button color="primary" class="button remove-present"  (click)="removePresent(firstIndex)" matTooltip="Usuń prezent" [disabled]="present.get('timesPicked').value > 0">-</button>
+            </div>
+          }
           <button mat-raised-button color="accent" class="button add-present" (click)="addPresent()" matTooltip="Dodaj kolejny prezent">+</button>
         </div>
         <mat-form-field id="signature" class="letter-form-field">
@@ -38,7 +40,7 @@
         <button id="letter-submit-button" (click)="submit()">
           <img class="stamp" src="../../../../assets/images/stamp.png" alt="Wyślij" matTooltip="Wyślij">
         </button>
-      
+
       </form>
     </div>
 

@@ -1,41 +1,55 @@
-<h1 *ngIf="letter">{{letter!.person}}</h1>
+@if (letter) {
+  <h1>{{letter!.person}}</h1>
+}
 <a class="--primary go_back"  routerLink="../.." title="Wróć">
   <span>Wróć</span>
 </a>
-<main *ngIf="letter">
-  <ng-container *ngFor="let item of letter.presentsList">
-    <div class="gift_wrapper" *ngIf="item.name">
-      <div class="{{giftClass}}" [ngClass]="{picked: item.timesPicked}">
-
-        <div *ngIf="item.link">
-          <a [href]="sanitizer.bypassSecurityTrustUrl(item.link)" target="_blank" rel="noopener">
-            <span class="title">Nazwa prezentu: </span>
-            <span class="value">
-              {{item.name}}
-            </span>
-          </a>
+@if (letter) {
+  <main>
+    @for (item of letter.presentsList; track item) {
+      @if (item.name) {
+        <div class="gift_wrapper">
+          <div class="{{giftClass}}" [ngClass]="{picked: item.timesPicked}">
+            @if (item.link) {
+              <div>
+                <a [href]="sanitizer.bypassSecurityTrustUrl(item.link)" target="_blank" rel="noopener">
+                  <span class="title">Nazwa prezentu: </span>
+                  <span class="value">
+                    {{item.name}}
+                  </span>
+                </a>
+              </div>
+            }
+            @if (!item.link) {
+              <div>
+                <span class="title">Nazwa prezentu: </span>
+                <span class="value">
+                  {{item.name}}
+                </span>
+              </div>
+            }
+            @if (item.additionalInfo) {
+              <div>
+                <span class="title">Dodatkowe informacje: </span>
+                <span class="value">
+                  {{item.additionalInfo}}
+                </span>
+              </div>
+            }
+          </div>
+          @if (item.timesPicked) {
+            <div class="times_picked">
+              Ilośc elfów pomagających przy tym prezencie: {{item.timesPicked}}
+            </div>
+          }
+          <div class="button_wrapper">
+            <button class="--primary" (click)="addPresent(item)">Zapakuj ten prezent</button>
+            @if (item.timesPicked) {
+              <button class="--primary" (click)="removePresent(item)">Odpakuj ten prezent</button>
+            }
+          </div>
         </div>
-        <div *ngIf="!item.link">
-          <span class="title">Nazwa prezentu: </span>
-          <span class="value">
-            {{item.name}}
-          </span>
-        </div>
-        <div *ngIf="item.additionalInfo">
-          <span class="title">Dodatkowe informacje: </span>
-          <span class="value">
-            {{item.additionalInfo}}
-          </span>
-        </div>
-      </div>
-      <div class="times_picked" *ngIf="item.timesPicked">
-        Ilośc elfów pomagających przy tym prezencie: {{item.timesPicked}}
-      </div>
-      <div class="button_wrapper">
-        <button class="--primary" (click)="addPresent(item)">Zapakuj ten prezent</button>
-        <button class="--primary" *ngIf="item.timesPicked" (click)="removePresent(item)">Odpakuj ten prezent</button>
-      </div>
-    </div>
-
-  </ng-container>
-</main>
+      }
+    }
+  </main>
+}

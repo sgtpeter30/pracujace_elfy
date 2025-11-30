@@ -6,22 +6,22 @@
 <main>
   <div class="child new_letter">
     <a class="title"
-    [routerLink]="['/tree/letters/write-letter']">
+      [routerLink]="['/tree/letters/write-letter']">
       Dodaj nowy list
     </a>
   </div>
-  <ng-container *ngFor="let item of list">
+  @for (item of list; track item) {
     <!-- <a class="child" href="./letter/{{item.id}}"> -->
     <div class="child">
       <a class="title" [routerLink]="['/tree/letters/write-letter', item.id]">
         {{item.person}}
       </a>
       <ul>
-        <ng-container *ngFor="let present of item.presentsList">
+        @for (present of item.presentsList; track present) {
           <li>{{present.name}}</li>
-        </ng-container>
+        }
       </ul>
     </div>
-  </ng-container>
-  
+  }
+
 </main>

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Inject, inject, ViewChild } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,11 +9,10 @@ import { User, UserService } from '../services/user.service';
 @Component({
     selector: 'app-login',
     imports: [
-        CommonModule,
-        MatButtonModule,
-        MatInputModule,
-        LiveFormComponent,
-    ],
+    MatButtonModule,
+    MatInputModule,
+    LiveFormComponent
+],
     providers: [],
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss'
