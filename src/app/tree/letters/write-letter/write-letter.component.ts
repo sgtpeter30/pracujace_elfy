@@ -8,10 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Present } from 'src/app/models/present.model';
 
 @Component({
-  selector: 'app-write-letter',
-  templateUrl: './write-letter.component.html',
-  styleUrls: ['./write-letter.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-write-letter',
+    templateUrl: './write-letter.component.html',
+    styleUrls: ['./write-letter.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 // todo rozszerzyć o typy
 // export interface Present {

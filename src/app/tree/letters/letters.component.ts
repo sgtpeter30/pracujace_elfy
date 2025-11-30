@@ -7,10 +7,11 @@ import { map } from 'rxjs';
 import { LetterService } from './letter.service';
 
 @Component({
-  selector: 'app-letters',
-  templateUrl: './letters.component.html',
-  styleUrls: ['./letters.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-letters',
+    templateUrl: './letters.component.html',
+    styleUrls: ['./letters.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class LettersComponent {
   list: Person[];

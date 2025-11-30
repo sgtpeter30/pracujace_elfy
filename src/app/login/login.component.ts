@@ -7,17 +7,16 @@ import { InputFieldComponent, LiveFormBuilder, LiveFormComponent, LiveFormModel 
 import { User, UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatInputModule,
-    LiveFormComponent,
-  ],
-  providers:[],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+    selector: 'app-login',
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatInputModule,
+        LiveFormComponent,
+    ],
+    providers: [],
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   private userService = inject(UserService)

@@ -4,10 +4,11 @@ import { map } from 'rxjs';
 import { Person } from 'src/app/models/person.model';
 
 @Component({
-  selector: 'app-presents',
-  templateUrl: './presents.component.html',
-  styleUrls: ['./presents.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-presents',
+    templateUrl: './presents.component.html',
+    styleUrls: ['./presents.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class PresentsComponent {
   list: Person[];

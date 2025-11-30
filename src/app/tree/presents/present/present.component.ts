@@ -6,10 +6,11 @@ import { map } from 'rxjs';
 import { Person } from 'src/app/models/person.model';
 
 @Component({
-  selector: 'app-present',
-  templateUrl: './present.component.html',
-  styleUrls: ['./present.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-present',
+    templateUrl: './present.component.html',
+    styleUrls: ['./present.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class PresentComponent {
   letter: Person;
