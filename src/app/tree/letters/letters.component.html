@@ -1,27 +1,28 @@
 <h1>Listy grzecznych dzieci</h1>
 
-<a class="--primary go_back"  href="" title="Wróć">
+<a class="--primary go_back" href="/home" title="Wróć">
   <span>Wróć</span>
 </a>
 <main>
-  <div class="child new_letter">
-    <a class="title"
-      [routerLink]="['/tree/letters/write-letter']">
-      Dodaj nowy list
-    </a>
-  </div>
-  @for (item of list; track item) {
-    <!-- <a class="child" href="./letter/{{item.id}}"> -->
-    <div class="child">
-      <a class="title" [routerLink]="['/tree/letters/write-letter', item.id]">
-        {{item.person}}
-      </a>
-      <ul>
-        @for (present of item.presentsList; track present) {
-          <li>{{present.name}}</li>
-        }
-      </ul>
+  <a routerLink="/tree/letters/write-letter" class="child">
+    <div class="new_letter">
+      <span class="title">
+        Dodaj nowy list
+      </span>
     </div>
+  </a>
+  @for (item of list; track item) {
+  <!-- <a class="child" href="./letter/{{item.id}}"> -->
+  <div class="child">
+    <a class="title" [routerLink]="['/tree/letters/write-letter', item.id]">
+      {{item.person}}
+    </a>
+    <ul>
+      @for (present of item.presentsList; track present) {
+      <li>{{present.name}}</li>
+      }
+    </ul>
+  </div>
   }
 
 </main>

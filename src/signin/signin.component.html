@@ -1,0 +1,13 @@
+<app-live-form [formModel]='signInLiveBuilder' [formSignal]='signInForm' [showLoader]='false'></app-live-form>
+@if (signInForm()?.errors().length !== 0 && signInForm.passwordVerification().dirty()) {
+  <mat-error>
+    {{signInForm()?.errors()[0]?.message}}
+  </mat-error>
+}
+<button 
+    mat-raised-button color="primary" 
+    class="w-100" 
+    (click)="signIn()"
+    [disabled]="signInForm().invalid() || !signInForm().dirty()"
+  >
+  Dołącz do Mikołajów</button>

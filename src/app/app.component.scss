@@ -1,0 +1,10 @@
+#snow-canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* nie blokuje kliknięć */
+  z-index: 0; /* jeśli chcesz, żeby animacja była pod innymi elementami */
+}

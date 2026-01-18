@@ -1,4 +1,5 @@
 app-letters{
+  height: 100vh;
   h1{
     position: relative;
     width: min-content;
@@ -71,8 +72,9 @@ app-letters{
 
       background-image: url('/assets/images/scroll_bottom.png');
     }
-    &.new_letter{
+    .new_letter{
       align-content: center;
+      position: fixed;
     }
     .title{
       font-weight: bold;

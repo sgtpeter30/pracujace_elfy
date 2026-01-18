@@ -1,0 +1,12 @@
+<div class="container">
+  <canvas #papyrusCanvas id="papyrusCanvas"></canvas>
+  <h2 class="title">Drogi mikołaju</h2>
+  
+  <span class="sub-title">Jak co roku przede wszystkim chcę prosić aby cała nasza Rodzina była zdrowa,
+    szczęśliwa i byśmy mogli przeżyć spokojnie nie tylko te Święta, ale cały nadchodzący rok
+  </span>
+  <app-live-form [formModel]='letterLiveBuilder' [formSignal]='letterForm' [showLoader]='false'></app-live-form>
+  <button id="letter-submit-button" (click)="submitForm()">
+    <img class="stamp" src="../../../../assets/images/stamp.png" alt="Wyślij" matTooltip="Wyślij">
+  </button>
+</div>

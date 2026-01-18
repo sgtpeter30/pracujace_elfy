@@ -1,59 +1,68 @@
 
-import { Component, Inject, inject, ViewChild } from '@angular/core';
+import { Component, Inject, inject, signal, ViewChild } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { InputFieldComponent, LiveFormBuilder, LiveFormComponent, LiveFormModel } from 'pt-core';
-import { User, UserService } from '../services/user.service';
+import { InputFieldComponent, LiveFormBuilder, LiveFormComponent, LiveFormModel, PasswordField, TextField } from '@props-and-tinkering/pt-core';
+import { UserService } from '../services/user.service';
+import { LoginModel } from '../models/login.model';
+import { Schema, schema, required, form } from '@angular/forms/signals';
+import { CommonModule } from '@angular/common';
+import { User } from './user.model';
 
 @Component({
-    selector: 'app-login',
-    imports: [
+  selector: 'app-login',
+  imports: [
+    CommonModule,
     MatButtonModule,
     MatInputModule,
     LiveFormComponent
-],
-    providers: [],
-    templateUrl: './login.component.html',
-    styleUrl: './login.component.scss'
+  ],
+  providers: [],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   private userService = inject(UserService)
+  lfb: LiveFormBuilder = new LiveFormBuilder()
 
   showLoginLoader: boolean = false
 
-  lfb: LiveFormBuilder = new LiveFormBuilder()
-  loginLiveForm!: LiveFormModel
-  @ViewChild('loginForm') loginForm!: LiveFormComponent
-  
+  loginLiveForm!: LiveFormModel<LoginModel>
+  loginSignal = signal<LoginModel>({
+    login: "",
+    password: ""
+  })
+  private liveFormSchema: Schema<LoginModel> = schema<LoginModel>((rootPath) => {
+    required(rootPath.login)
+    required(rootPath.password)
+  })
+
+  liveForm = form<LoginModel>(this.loginSignal, this.liveFormSchema)
+
   ngOnInit(): void {
     this.loginLiveForm = {
       name: 'loginForm',
-      group: {
+      controls: {
         login: this.lfb.controls({
           label: 'Login',
-          component: InputFieldComponent,
-          validators: ()=> Validators.required
+          component: TextField,
         }),
         password: this.lfb.controls({
           label: 'Hasło',
-          component: InputFieldComponent,
-          inputType: 'password',
-          validators: ()=> Validators.required
+          component: PasswordField,
         })
       },
     }
   }
 
-  protected async loginUser(){
+  protected async loginUser() {
     this.showLoginLoader = true;
-    const formValue = this.loginForm.getValueIfValid();
-    console.log("User")
-    console.log(formValue)
-    if(formValue){
+    const formValue = this.liveForm().value();
+    if (formValue) {
       await this.userService.loginUser(formValue as User);
       this.showLoginLoader = false;
-    }else{
+    } else {
       this.showLoginLoader = false;
     }
   }

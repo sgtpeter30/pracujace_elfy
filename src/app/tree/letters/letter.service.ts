@@ -6,7 +6,7 @@ import { Person } from "src/app/models/person.model";
   providedIn: 'root',
 })
 export class LetterService {
-  lettersList = new BehaviorSubject<Person[]>({} as Person[])
+  lettersList = new BehaviorSubject<Person[]>([{}] as Person[])
 
 
   public uploadList(list: Person[]){
@@ -23,6 +23,12 @@ export class LetterService {
     console.log(list);
     const A = [{a: 1}, {a: 2}]
     return list.find(letter=> letter.id === id)
+    // return {
+    //   id: "1",
+    //   person: "Test",
+    //   submissionDate: Date,
+    //   presentsList: []
+    // } as Person
     
   }
 }

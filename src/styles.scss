@@ -27,13 +27,15 @@ body {
   font-family: Marck Script, "Helvetica Neue", sans-serif !important;
   background-color: var(--background);
   background-image: none;
+  display: flex;
+  justify-content: center;
 }
 app-root{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  // align-items: center;
+  // align-items: flex-start;
+  align-items: center;
   font-size: 24px;
   background-size: cover;
   max-width: 100vw;
@@ -79,3 +81,5 @@ button, a{
   right: 50px;
   font-size: 24px;
 }
+
+

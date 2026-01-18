@@ -20,20 +20,20 @@ export class LettersComponent {
     public sanitizer: DomSanitizer,
     private letterService: LetterService
   ){
-    this.http.get('list')
-    .pipe(map((data: any)=>{
-      return data.map(letter => {
-        return {
-          id: letter._id,
-          ...letter
-        }
-      })
-    }))
-    .subscribe((data: Person[]) => {
-      console.log(data);
-      this.list = data;
-      this.letterService.uploadList(data);
-    })
+    // this.http.get('list')
+    // .pipe(map((data: any)=>{
+    //   return data.map(letter => {
+    //     return {
+    //       id: letter._id,
+    //       ...letter
+    //     }
+    //   })
+    // }))
+    // .subscribe((data: Person[]) => {
+    //   console.log(data);
+    //   this.list = data;
+    //   this.letterService.uploadList(data);
+    // })
   }
 
 }

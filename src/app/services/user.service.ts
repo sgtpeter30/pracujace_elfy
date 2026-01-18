@@ -1,25 +1,21 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, lastValueFrom, of, tap } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { User } from '../login/user.model';
 
 export interface Token {
   accessToken: string | null,
   refreshToken: string | null,
 }
-export interface User
-{
-  login : string,
-  password : string,
-}
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   private token!: Token | null
+  public userLogin = signal<string>("");
 
   constructor(
     private http: HttpClient,
@@ -65,7 +61,7 @@ export class UserService {
     document.cookie = `goodCookie=${JSON.stringify(token)};expires=${expireDate};Strict;`
   }
 
-  createUser(data: any) {
+  createUser(data: User) {
     const authData: User = {
       login: data.login,
       password: data.password
@@ -78,6 +74,7 @@ export class UserService {
           horizontalPosition: 'center',
           verticalPosition: 'top'
         })
+        this.router.navigate(["/home"]);
       })
       .catch(err => {
         this.snackBar.open(err.error.message, undefined, {
@@ -94,10 +91,11 @@ export class UserService {
   async loginUser(authData: User) {
     // return this.http.post<User[]>(this.url+'/signin', authData);
     try {
-      console.log(authData)
       const response = await lastValueFrom(this.http.post<Token>(this.url + '/signin', authData));
       const token = response;
       this.setToken(token)
+      this.router.navigate(["/home"]);
+      this.userLogin.update(()=> authData.login)
       return response;
     } catch (err: any) {
       this.snackBar.open(err.error.message, undefined, {
@@ -134,4 +132,7 @@ export class UserService {
         })
       );
   }
+
+
+
 }

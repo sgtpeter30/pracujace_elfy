@@ -2,11 +2,8 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@a
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreeComponent } from './tree/tree.component';
 import { LettersComponent } from './tree/letters/letters.component';
 import { PresentsComponent } from './tree/presents/presents.component';
@@ -19,13 +16,16 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input'; 
 import { MatDialogModule } from '@angular/material/dialog'; 
 import { LoginComponent } from './login/login.component';
-import { AuthInterceptorService, PermissionsService, TranslationService, UserService } from 'pt-core';
+import { AuthInterceptorService } from './services';
+import { RefreshInterceptorService } from './services/refresh.interceptor.service';
+import { AppRoutingModule } from './app-routing.module';
 
 export const environment = {
   production: true,
   // apiUrl: "https://straszna-fabryka-swietego-mikolaja.loca.lt"
   // apiUrl: "http://localhost:3000"
-  apiUrl: "http://localhost:2412/api"
+  apiUrl: "http://localhost:2412"
+//   apiUrl: "http://localhost:3200"
   // apiUrl: "https://assuring-apparently-foal.ngrok-free.app/api"
 };
 
@@ -45,21 +45,12 @@ export const environment = {
         MatTooltipModule,
         MatInputModule,
         MatDialogModule,
-        RouterModule.forRoot([
-            { path: '', component: LoginComponent },
-            { path: 'home', component: TreeComponent },
-            { path: 'tree/letters', component: LettersComponent },
-            { path: 'tree/letters/write-letter/:id', component: WriteLetterComponent },
-            { path: 'tree/letters/write-letter', component: WriteLetterComponent },
-            { path: 'tree/presents', component: PresentsComponent },
-            { path: 'tree/presents/present/:id', component: PresentComponent },
-            { path: 'admin', component: HomeComponent },
-        ]),
-        BrowserAnimationsModule
     ], 
     providers: [
         { provide: "BASE_API_URL", useValue: environment.apiUrl },
-        { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true },
+        // { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: RefreshInterceptorService, multi: true },
         provideHttpClient(withInterceptorsFromDi())
     ] })
 export class AppModule { }
